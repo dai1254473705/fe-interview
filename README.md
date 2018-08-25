@@ -9,4 +9,6 @@
   > [test-2.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-2.html)
 ##### 3.请描述原生js里bind函数的作用，什么场景需要用到它，并手写Function.bind函数
   > [test-3.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-3.html)
+##### 4.程序输出题，请写出运行结果及思路
+  > [test-4.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-4.html)
 
