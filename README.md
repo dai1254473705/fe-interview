@@ -11,4 +11,7 @@
   > [test-3.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-3.html)
 ##### 4.程序输出题，请写出运行结果及思路
   > [test-4.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-4.html)
+##### 5.请分别说明利用js数组模拟队列和堆栈的方法
+  > [test-5.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-5.html)
+  
 
