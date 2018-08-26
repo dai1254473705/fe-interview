@@ -13,5 +13,7 @@
   > [test-4.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-4.html)
 ##### 5.请分别说明利用js数组模拟队列和堆栈的方法
   > [test-5.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-5.html)
+##### 6.请描述下原生js的事件。（包括但不限于：事件的不同阶段，应用场景，事件代理，绑定和解绑，浏览器兼容等）
+  > [test-6.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-6.html)
   
 

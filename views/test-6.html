@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>请描述下原生js的事件。（包括但不限于：事件的不同阶段，应用场景，事件代理，绑定和解绑，浏览器兼容等）</title>
+	</head>
+
+	<body>
+		<p>请描述下原生js的事件。（包括但不限于：事件的不同阶段，应用场景，事件代理，绑定和解绑，浏览器兼容等）</p>
+		<div>
+			<h3>js里事件的三个阶段</h3>
+			<p>捕获、目标阶段、冒泡阶段</p>
+			<ul>
+				<li>
+					<p>1.捕获：事件由页面元素接收，逐级向下，到具体的元素</p>
+				</li>
+				<li>
+					<p>2.目标：具体的元素本身</p>
+				</li>
+				<li>
+					<p>3.冒泡：跟捕获相反，具体元素本身，逐级向上，到页面元素（事件委托通过冒泡实现）</p>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3>事件冒泡和事件捕获的应用场景</h3>
+			<p>事件代理/事件委托</p>
+			<p style="font-size: 14px;color: red;">点击下面1、2控制台查看输出</p>
+			<ul class="oul">
+				<li>
+					<div>
+						<p> 1.当存在多个元素可以共用同一个监听器</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<p> 2.用事件委托实现动态监控(根据后台接口返回数据后，js动态插入到页面中的dom，如果不使用事件委托则不起作用)</p>
+					</div>
+				</li>
+			</ul>
+			<div class="html-content">
+
+			</div>
+			<button class="test-btn">点击插入数据测试动态监控</button>
+		</div>
+		<div>
+			<h3>事件绑定和解绑</h3>
+			<p>事件类型没有on，false 表示在事件第三阶段（冒泡）触发，true表示在事件第一阶段（捕获）触发。 如果handle是同一个方法，只执行一次。
+				<p>ele.addEventListener('click', function(){ }, false); </p>
+				<p>解绑事件，参数和绑定一样</p>
+				<p>ele.removeEventListener(event.type, handle, boolean);</p>
+				<ul>
+					<li>
+						<p>绑定：addEventListener</p>
+					</li>
+					<li>
+						<p>解绑：removeEventListener</p>
+					</li>
+				</ul>
+		</div>
+		<div>
+			<h3>	事件绑定兼容问题（主要是兼容可爱的IE）参考：<a href="https://www.cnblogs.com/zhangmingze/p/4864367.html">https://www.cnblogs.com/zhangmingze/p/4864367.html</a></h3>
+			<p>attachEvent(event.type, handle ); IE特有，兼容IE8及以下，可添加多个事件处理程序，只支持冒泡阶段</p>
+			<p>addEventListener(event.type, handle, boolean); IE8及以下不支持，属于DOM2级的方法，可添加多个方法不被覆盖</p>
+		</div>
+		<div>
+			<h3>阻止事件行为</h3>
+			<ul>
+				<li>
+					<p>return false; 阻止独享属性（通过on这种方式）绑定的事件的默认事件</p>
+				</li>
+				<li>
+					<p>event.preventDefault( ); 阻止通过 addEventListener( ) 添加的事件的默认事件</p>
+				</li>
+				<li>
+					<p>event.returnValue = false; 阻止通过 attachEvent( ) 添加的事件的默认事件</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function() {
+			/**
+			 * @date 2018-8-26 9:44
+			 * @author DIEW
+			 * 事件委托（事件代理） 通过事件冒泡实现
+			 * 当存在多个元素可以共用同一个监听器
+			 */
+			var oul = document.querySelector(".oul");
+			oul.addEventListener("click", function(e) {
+				var el = e.target;
+				console.log(el.tagName);
+				//判断当前点击的元素是否为li，如果不是，执行以下的while循环
+				while(el.tagName !== 'LI') {
+					console.log(el.parentNode);
+					console.log(el.tagName);
+					if(el === oul) {
+						el = null
+						break;
+					}
+					//否则，将当前元素父元素赋给el
+					el = el.parentNode;
+				}
+				//如果最后el不为null，则打出'ok'
+				if(!!el) {
+					console.log('找到对应的li了')
+				}
+				//否则，打出'你点击的不是li'
+				else {
+					console.log('你点击的不是li')
+				}
+			});
+
+			/**
+			 * @date 2018-8-26 9:44
+			 * @author DIEW
+			 * 事件委托（事件代理） 通过事件冒泡实现
+			 * 用事件委托实现动态监控
+			 */
+			var htmlContent = document.querySelector(".html-content");
+			var testBtn = document.querySelector(".test-btn");
+			var testevent2 = document.querySelector(".testevent2");
+
+			testBtn.onclick = function() {
+				htmlContent.innerHTML = '<p class="testevent1">点我测试常规绑定事件</p><p class="testevent2">点我测试事件委托</p>';
+				//必须在创建完成后才可以绑定点击事件
+				var testevent1 = document.querySelector(".testevent1");
+				testevent1.onclick = function() {
+					alert("点我测试常规绑定事件");
+				};
+			};
+
+			//通过给已存在的节点添加事件，达到监听未来的子节点的目的，不必考虑什么时候子节点插入
+			htmlContent.onclick = function(e) {
+				var el = e.target;
+				alert(el.tagName);
+				//如果子元素有多级，可以通过事件冒泡找到 TODO 
+			};
+
+			/**
+			 * @date 2018-8-26 9:44
+			 * https://www.cnblogs.com/zhangmingze/
+			 * 事件绑定及事件解绑封装成为一个函数，兼容浏览器，包括IE6及以上
+			 */
+			// 事件绑定
+			function addEvent(element, eType, handle, bol) {
+				if(element.addEventListener) { //如果支持addEventListener
+					element.addEventListener(eType, handle, bol);
+				} else if(element.attachEvent) { //如果支持attachEvent
+					element.attachEvent("on" + eType, handle);
+				} else { //否则使用兼容的onclick绑定
+					element["on" + eType] = handle;
+				}
+			}
+			// 事件解绑
+			function removeEvent(element, eType, handle, bol) {
+				if(element.addEventListener) {
+					element.removeEventListener(eType, handle, bol);
+				} else if(element.attachEvent) {
+					element.detachEvent("on" + eType, handle);
+				} else {
+					element["on" + eType] = null;
+				}
+			}
+		};
+	</script>
+
+</html>
