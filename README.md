@@ -15,5 +15,5 @@
   > [test-5.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-5.html)
 ##### 6.请描述下原生js的事件。（包括但不限于：事件的不同阶段，应用场景，事件代理，绑定和解绑，浏览器兼容等）
   > [test-6.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-6.html)
-  
-
+##### 7.使用jQuery选择器找出所有p标签下的第一个a标签中的属性名	为na且值为“b”开头的元素（即输出b1和b4）
+  > [test-7.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-7.html)

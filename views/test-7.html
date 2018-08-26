@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>jquery选择器</title>
+	</head>
+
+	<body>
+		<p>jquery选择器</p>
+		<div>
+			<p><a na="b1">b1</a><a na="b2"></a></p>
+			<p><a na="a1">a1</a><a na="b3"></a></p>
+			<p><a na="b4">b4</a><a na="ab"></a></p>
+			<p><a>null</a><a na="b5"></a></p>
+		</div>
+	</body>
+	<script src="../libs/javascript/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//使用jQuery选择器找出所有p标签下的第一个a标签中的属性名	为na且值为“b”开头的元素（即输出b1和b4）
+			var el = $("p").find("a:first[na][na!='a1']");
+			console.log(el);
+		})
+	</script>
+
+</html>
