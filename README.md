@@ -19,3 +19,6 @@
   > [test-7.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-7.html)
 ##### 8.通过css实现左侧2个块宽度固定，高度各50%，右侧宽度自适应
   > [test-8.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-8.html)
+##### 9.this指向问题,输出num,obj,num
+  > [test-9.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-9.html)
+  
