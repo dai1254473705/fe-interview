@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+     <head>
+           <meta charset="UTF-8">
+           <title>通过css实现左侧2个块宽度固定，高度各50%，右侧宽度自适应</title>
+           <style>
+          *{margin:0;padding:0;border:0;}
+           html,body{width: 100%;height:100%;}
+           .left{
+                background:red;
+                width:200px;
+                height:50%;
+                float:left;
+           }
+           .left1{
+                background:green;
+                width:200px;
+                height:50%;
+                position:absolute;
+                top:50%;
+                left:0;
+           }
+           .right{
+                background:yellow;
+                height:100%;
+                overflow: hidden;
+           }
+           </style>
+     </head>
+     <body>
+           <div class="left" ></div>
+           <div class="left1"></div>
+           <div class="right">
+                sadlfjaflasdjf wdlfjlsad jfl jlwajf lajlasd asdf asdf df as
+                sadlfjaflasdjf wdlfjlsad jfl jlwajf lajlasd asdf asdf df as
+                sadlfjaflasdjf wdlfjlsad jfl jlwajf lajlasd asdf asdf df as
+                sadlfjaflasdjf wdlfjlsad jfl jlwajf lajlasd asdf asdf df as
+                sadlfjaflasdjf wdlfjlsad jfl jlwajf lajlasd asdf asdf df as
+                sadlfjaflasdjf wdlfjlsad jfl jlwajf lajlasd asdf asdf df as
+           </div>
+     </body>
+     <script>
+           var reg = /^[\u4e00-\u9fa5]+[.|?][\u4e00-\u9fa5]+$/;
+           var str = "是?个逗逼";
+           var res = str.match(reg);
+           console.log(res);
+     </script>
+</html>
