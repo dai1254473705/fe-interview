@@ -21,4 +21,6 @@
   > [test-8.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-8.html)
 ##### 9.this指向问题,输出num,obj,num
   > [test-9.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-9.html)
-  
+##### 10.快速排序
+  > [test-10.html](https://github.com/dai1254473705/interview-questions/blob/master/views/test-10.html)
+   
