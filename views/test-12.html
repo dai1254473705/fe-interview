@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>使用css实现一个空心箭头和一个实心箭头</title>
+		<link rel="stylesheet" href="../libs/css/prism.css" />
+		<style type="text/css">
+			.container{
+				height: 100%;
+				width: 100%;
+			}
+			.icon-left{
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-left:0px solid #000000 ;
+				border-top:20px solid transparent ;
+				border-bottom:20px solid transparent ;
+				border-right:20px solid #000000;
+			}
+			.icon-left:after{
+				content: "";
+				position: absolute;
+				left: 1px;
+				top: -20px;
+				border-left:0px solid #fff ;
+				border-top:20px solid transparent ;
+				border-bottom:20px solid transparent ;
+				border-right:20px solid #fff;
+			}
+			.icon-right{
+				position: absolute;
+				left: 40px;
+				top: 0;
+				border-left:20px solid #000 ;
+				border-top:20px solid transparent ;
+				border-bottom:20px solid transparent ;
+				border-right:0px solid #000;
+			}
+
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<span class="icon-left"></span>
+			<span class="icon-right"></span>
+		</div>
+	</body>
+</html>

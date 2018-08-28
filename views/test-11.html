@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>css实现两列布局</title>
+		<link rel="stylesheet" href="../libs/css/prism.css" />
+		<style type="text/css">
+			.container {
+				padding: 0;
+				margin: 0;
+				position: relative;
+				height: 100%;
+				width: 100%;
+			}
+			.left,
+			.right {
+				min-height: 200px;
+				overflow: hidden;
+				height: 100px;
+			}
+			.left {
+				background: #F8C555;
+				overflow: hidden;
+				margin-right: 300px;
+			}
+			.right {
+				background: #FF0000;
+				width: 300px;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="left">
+				<h3>css实现两列布局</h3>
+				<p>1.右侧固定宽度，左侧自适应屏幕宽度</p>
+				<p>2.左右两列等高布局</p>
+				<p>3.左右两列的高度要求最小200px</p>
+			</div>
+			<div class="right"></div>
+		</div>
+	</body>
+</html>
