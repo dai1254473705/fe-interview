@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title></title>
+	</head>
+
+	<body>
+		<h3>BOM是什么？列举你知道的BOM对象</h3>
+		<p>BOM概念：browser object model(浏览器对象模型 )</p>
+		<h3>BOM对象</h3>
+		<ul>
+			<li>
+				1.window对象，是js的最顶层对象，其他的BOM对象都是window对象的属性；
+			</li>
+			<li>
+				2.document 对象，文档对象
+			</li>
+			<li>
+				3.location 对象，浏览器当前URL信息；
+			</li>
+			<li>
+				4.navigation对象，浏览器本身信息；
+			</li>
+			<li>
+				5.history对象，浏览器访问历史信息；
+			</li>
+		</ul>
+		<h3>块级元素和内联元素的区别是什么？列举常见的块级和内联元素</h3>
+		<h4>块级：</h4>
+		<p>div,p,ul,li,ol,header,footer,aside,section,h1-h6,dl,dt,dd,table,hr,table</p>
+		<h4>内联：</h4>
+		<p>span,a,strong,i,lable,img,input,sup,sub,button</p>
+		<h4>区别</h4>
+		<ul>
+			<li>1.block元素通常为独立的一块，会单独占一行；inline元素前后不会产生换行，一列inline元素都在一行内显示，直到该行排满。</li>
+			<li>2.block元素可以包含block和inline元素，inline元素只能包含inline元素。</li>
+		</ul>
+		<h3>列举你所知道的常见的前端性能优化的方法以及使用场景</h3>
+		<h4>性能优化方法：</h4>
+		<ul>
+			<li>1.CSS Sprites(雪碧图)，合并 CSS图片，减少请求数</li>
+			<li>2.使用浏览器缓存</li>
+			<li>3.CSS放在页面最上部，javascript放在页面最下面</li>
+			<li>4.CSS、JavaScript代码压缩合并</li>
+			<li>5.减少url请求数量,尽量使用cdn</li>
+			<li>6.使用独立的图片服务器域名</li>
+			<li>7.减少DOM操作</li>
+			<li>8.用js的图片懒加载解决网站图片过多，一次性加载慢的问题</li>
+		</ul>
+		<h3>移动端1px实现</h3>
+		<style type="text/css">
+			.borderbottom {
+				width: 300px;
+				height: 200px;
+				background: red;
+			}
+			
+			.borderbottom:after {
+				content: "";
+				display: block;
+				height: 1px;
+				background: #000;
+				transform: translateY(0.5);
+			}
+		</style>
+		<p class="borderbottom"></p>
+		<h3>如何实现一个弹窗居中显示？请列举至少两种方法</h3>
+		<p>1.弹窗宽度高固定(200px):position:absolute;left:50%;top:50%;margin-top:-100px;margin-left:-50%;</p>
+		<p>2.弹窗宽高不固定:position: absolute;left: 50%;top:50%;transform: translate(-50%,-50%);background: #999;</p>
+
+		<h3>js跨域问题，以及如何解决跨域？</h3>
+		<p>跨域是指请求不同协议、域名、端口的资源，由浏览器的同源策略造成的，是浏览器对JavaScript施加的安全限制。</p>
+		<ul>
+			<li>1.cors</li>
+			<li>2.通过jsonp跨域</li>
+			<li>3.通过修改document.domain来跨子域</li>
+			<li>4.使用HTML5的window.postMessage方法跨域</li>
+			<li>5.web sockets</li>
+		</ul>
+	</body>
+
+</html>
