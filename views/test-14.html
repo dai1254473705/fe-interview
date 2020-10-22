@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style type="text/css">
+			p {
+				font-size: 0.24rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>字体大小</p>
+		<span style="font-size: 12px;">字体大小</span>
+		<textarea id="box1"></textarea>
+		<button class="btn" data-clipboard-target="#box1">
+		  点击复制地址
+		</button>
+		<p id="log"></p>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+	<script type="text/javascript">
+		function getlocationpoint() {
+			if(navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+
+					document.querySelector("#box1").innerHTML = position.coords.latitude + "：" + position.coords.longitude;
+					latitude = position.coords.latitude; //获取纬度
+					longitude = position.coords.longitude; //获取经度
+					transalateAddress(latitude, longitude);
+				});
+			} else {
+				alert("不支持定位功能");
+			}
+		}
+		getlocationpoint();
+
+		var clipboard = new ClipboardJS('.btn');
+
+		clipboard.on('success', function(e) {
+			console.info('Action:', e.action);
+			console.info('Text:', e.text);
+			console.info('Trigger:', e.trigger);
+			e.clearSelection();
+		});
+
+		clipboard.on('error', function(e) {
+			console.error('Action:', e.action);
+			console.error('Trigger:', e.trigger);
+		});
+
+		function transalateAddress(latitude, longitude) {
+			$.ajax({
+				type: 'get',
+				url: "http://api.map.baidu.com/geocoder/v2/?output=json&pois=1",
+				dataType: "jsonp",
+				data: {
+					"location": latitude + "," + longitude,
+					"ak": "2yj0orPscf4IFIGVG2nrlYRFrGNYozAh",
+					"_": new Date().getTime()
+				},
+				success: function(res) {
+					console.log(res);
+					console.log(res.result.formatted_address);
+					alert(res.result.formatted_address);
+					document.querySelector("#log").innerHTML = JSON.stringify(res)
+				},
+				error: function(res) {
+					console.log(res);
+				}
+			});
+		}
+	</script>
+	</script>
+
+</html>

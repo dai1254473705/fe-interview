@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style type="text/css">
+			.flex-content{
+				display: flex;
+				height: 100px;
+				width:100px;
+				border:1px solid #6196CC;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				padding:10px;
+			}
+			.flex-item{
+				width:20px;
+				height:20px;
+				background: #000;
+				border-radius: 50%;
+			}
+			.flex-item:first-child{
+				align-self: flex-start;
+			}
+			.flex-item:last-child{
+				align-self: flex-end;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="flex-content">
+			<div class="flex-item">1</div>
+			<div class="flex-item">1</div>
+			<div class="flex-item">1</div>
+		</div>
+	</body>
+
+</html>
