@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue性能提升之 Object.freeze() |  前端小喵</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="前端小喵微信公众号文章项目">
+    <link rel="preload" href="/assets/css/0.styles.de540e03.css" as="style"><link rel="preload" href="/assets/js/app.617b9cc5.js" as="script"><link rel="preload" href="/assets/js/2.e6a2dc2d.js" as="script"><link rel="preload" href="/assets/js/24.697e6c10.js" as="script"><link rel="prefetch" href="/assets/js/10.581b745b.js"><link rel="prefetch" href="/assets/js/11.40b22ce3.js"><link rel="prefetch" href="/assets/js/12.f43cf7fc.js"><link rel="prefetch" href="/assets/js/13.63ebe8b2.js"><link rel="prefetch" href="/assets/js/14.61b2e0d9.js"><link rel="prefetch" href="/assets/js/15.db8383cc.js"><link rel="prefetch" href="/assets/js/16.c66a6f5a.js"><link rel="prefetch" href="/assets/js/17.4a43ce9a.js"><link rel="prefetch" href="/assets/js/18.359f3686.js"><link rel="prefetch" href="/assets/js/19.ff1188d2.js"><link rel="prefetch" href="/assets/js/20.0ca6ba22.js"><link rel="prefetch" href="/assets/js/21.8e7215a1.js"><link rel="prefetch" href="/assets/js/22.d9181e53.js"><link rel="prefetch" href="/assets/js/23.640322f2.js"><link rel="prefetch" href="/assets/js/25.2ce8c5b5.js"><link rel="prefetch" href="/assets/js/26.392ffc11.js"><link rel="prefetch" href="/assets/js/27.655295cb.js"><link rel="prefetch" href="/assets/js/28.0558477a.js"><link rel="prefetch" href="/assets/js/29.bf421f0c.js"><link rel="prefetch" href="/assets/js/3.824e2a13.js"><link rel="prefetch" href="/assets/js/30.618e115b.js"><link rel="prefetch" href="/assets/js/31.53d6cb81.js"><link rel="prefetch" href="/assets/js/32.3cbeba60.js"><link rel="prefetch" href="/assets/js/33.979d1d9a.js"><link rel="prefetch" href="/assets/js/34.c45827a1.js"><link rel="prefetch" href="/assets/js/35.1e847f3c.js"><link rel="prefetch" href="/assets/js/4.5ed19beb.js"><link rel="prefetch" href="/assets/js/5.25e1e9fa.js"><link rel="prefetch" href="/assets/js/6.ebf1154f.js"><link rel="prefetch" href="/assets/js/7.9fa2cd7c.js"><link rel="prefetch" href="/assets/js/8.d879a9fd.js"><link rel="prefetch" href="/assets/js/9.ba70e4e9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.de540e03.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt=" 前端小喵" class="logo"> <span class="site-name can-hide"> 前端小喵</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/emoji/" class="nav-link">
+  表情
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">资源</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">资源</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/resources/" class="nav-link">
+  公众号编辑工具
+</a></li><li class="dropdown-item"><!----> <a href="/images/noCopyright/" class="nav-link">
+  无版权图片
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/emoji/" class="nav-link">
+  表情
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">资源</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">资源</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/resources/" class="nav-link">
+  公众号编辑工具
+</a></li><li class="dropdown-item"><!----> <a href="/images/noCopyright/" class="nav-link">
+  无版权图片
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">微信公众号文章首页</a></li><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>本地图片资源</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/images/noCopyright.html" class="sidebar-link">无版权图片网站</a></li><li><a href="/images/guanzhu.html" class="sidebar-link">求关注</a></li><li><a href="/images/line.html" class="sidebar-link">分割线</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>2020年09月文章</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>2020年10月文章</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/10/10.html" class="sidebar-link">koa-jsonp-demo</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue性能提升之-object-freeze"><a href="#vue性能提升之-object-freeze" class="header-anchor">#</a> vue性能提升之 Object.freeze()</h1> <blockquote><p>原文链接：https://segmentfault.com/a/1190000006191558</p></blockquote> <blockquote><p>Object.freeze()是ES5新增的特性，可以冻结一个对象，防止对象被修改。</p></blockquote> <p>如果你有一个巨大的数组或Object，并且确信数据不会修改，使用Object.freeze()可以让性能大幅提升。在我的实际开发中，这种提升大约有5~10倍，倍数随着数据量递增。</p> <p>并且，Object.freeze()冻结的是值，你仍然可以将变量的引用替换掉。举个例子：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item in list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ item.value }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// vue不会对list里的object做getter、setter绑定</span>
+        list<span class="token operator">:</span> Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 界面不会有响应</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 下面两种做法，界面都会响应</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">100</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">100</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>vue的文档没有写上这个特性，但这是个非常实用的做法，对于纯展示的大数据，都可以使用Object.freeze提升性能。</p> <h2 id="感谢大家"><a href="#感谢大家" class="header-anchor">#</a> 感谢大家</h2> <ul><li>爱心三连击 <strong>点赞，转发，在看</strong>，点个在看，是我更新的最大的动力。</li> <li>关注公众号<strong>前端小喵</strong>，有更多好文推荐哦！</li> <li>阅读往期推荐好文</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.617b9cc5.js" defer></script><script src="/assets/js/2.e6a2dc2d.js" defer></script><script src="/assets/js/24.697e6c10.js" defer></script>
+  </body>
+</html>

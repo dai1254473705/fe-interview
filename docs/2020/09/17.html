@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>17、javascript 深拷贝和浅拷贝之如何对一个对象进行深度clone |  前端小喵</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="前端小喵微信公众号文章项目">
+    <link rel="preload" href="/assets/css/0.styles.de540e03.css" as="style"><link rel="preload" href="/assets/js/app.617b9cc5.js" as="script"><link rel="preload" href="/assets/js/2.e6a2dc2d.js" as="script"><link rel="preload" href="/assets/js/9.ba70e4e9.js" as="script"><link rel="prefetch" href="/assets/js/10.581b745b.js"><link rel="prefetch" href="/assets/js/11.40b22ce3.js"><link rel="prefetch" href="/assets/js/12.f43cf7fc.js"><link rel="prefetch" href="/assets/js/13.63ebe8b2.js"><link rel="prefetch" href="/assets/js/14.61b2e0d9.js"><link rel="prefetch" href="/assets/js/15.db8383cc.js"><link rel="prefetch" href="/assets/js/16.c66a6f5a.js"><link rel="prefetch" href="/assets/js/17.4a43ce9a.js"><link rel="prefetch" href="/assets/js/18.359f3686.js"><link rel="prefetch" href="/assets/js/19.ff1188d2.js"><link rel="prefetch" href="/assets/js/20.0ca6ba22.js"><link rel="prefetch" href="/assets/js/21.8e7215a1.js"><link rel="prefetch" href="/assets/js/22.d9181e53.js"><link rel="prefetch" href="/assets/js/23.640322f2.js"><link rel="prefetch" href="/assets/js/24.697e6c10.js"><link rel="prefetch" href="/assets/js/25.2ce8c5b5.js"><link rel="prefetch" href="/assets/js/26.392ffc11.js"><link rel="prefetch" href="/assets/js/27.655295cb.js"><link rel="prefetch" href="/assets/js/28.0558477a.js"><link rel="prefetch" href="/assets/js/29.bf421f0c.js"><link rel="prefetch" href="/assets/js/3.824e2a13.js"><link rel="prefetch" href="/assets/js/30.618e115b.js"><link rel="prefetch" href="/assets/js/31.53d6cb81.js"><link rel="prefetch" href="/assets/js/32.3cbeba60.js"><link rel="prefetch" href="/assets/js/33.979d1d9a.js"><link rel="prefetch" href="/assets/js/34.c45827a1.js"><link rel="prefetch" href="/assets/js/35.1e847f3c.js"><link rel="prefetch" href="/assets/js/4.5ed19beb.js"><link rel="prefetch" href="/assets/js/5.25e1e9fa.js"><link rel="prefetch" href="/assets/js/6.ebf1154f.js"><link rel="prefetch" href="/assets/js/7.9fa2cd7c.js"><link rel="prefetch" href="/assets/js/8.d879a9fd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.de540e03.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt=" 前端小喵" class="logo"> <span class="site-name can-hide"> 前端小喵</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/emoji/" class="nav-link">
+  表情
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">资源</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">资源</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/resources/" class="nav-link">
+  公众号编辑工具
+</a></li><li class="dropdown-item"><!----> <a href="/images/noCopyright/" class="nav-link">
+  无版权图片
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/emoji/" class="nav-link">
+  表情
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">资源</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">资源</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/resources/" class="nav-link">
+  公众号编辑工具
+</a></li><li class="dropdown-item"><!----> <a href="/images/noCopyright/" class="nav-link">
+  无版权图片
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">微信公众号文章首页</a></li><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>本地图片资源</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/images/noCopyright.html" class="sidebar-link">无版权图片网站</a></li><li><a href="/images/guanzhu.html" class="sidebar-link">求关注</a></li><li><a href="/images/line.html" class="sidebar-link">分割线</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>2020年09月文章</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/09/13.html" class="sidebar-link">13、经常要用到的但又总是记不住的样式</a></li><li><a href="/2020/09/14.html" class="sidebar-link">14、js常用数组的方法总结</a></li><li><a href="/2020/09/15.html" class="sidebar-link">15、bem css命名规范</a></li><li><a href="/2020/09/16.html" class="sidebar-link">16、javascript 中的 call 和 apply 实现原理</a></li><li><a href="/2020/09/17.html" aria-current="page" class="active sidebar-link">17、javascript 深拷贝和浅拷贝之如何对一个对象进行深度clone</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/2020/09/18.html" class="sidebar-link">18、小程序rich-text组件改变内部img图片样式的方法</a></li><li><a href="/2020/09/19.html" class="sidebar-link">19、前端SEO优化</a></li><li><a href="/2020/09/20.html" class="sidebar-link">20、 css常用和常用却容易忘记的样式合集</a></li><li><a href="/2020/09/21.html" class="sidebar-link">21、CSS阴影效果(Box-shadow)用法趣味讲解</a></li><li><a href="/2020/09/22.html" class="sidebar-link">22、 记住这几个git命令，创建、查看、删除、重命名和tag就够了～</a></li><li><a href="/2020/09/23.html" class="sidebar-link">23、一文搞懂this指向问题</a></li><li><a href="/2020/09/24.html" class="sidebar-link">24、数据响应式原理剖析</a></li><li><a href="/2020/09/25.html" class="sidebar-link">25、请编写一个 JavaScript 函数 parseQueryString，它的用途是把 URL 参数解析为一个对象</a></li><li><a href="/2020/09/26.html" class="sidebar-link">26、call 和 apply 的区别</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>2020年10月文章</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/10/10.html" class="sidebar-link">koa-jsonp-demo</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_17、javascript-深拷贝和浅拷贝之如何对一个对象进行深度clone"><a href="#_17、javascript-深拷贝和浅拷贝之如何对一个对象进行深度clone" class="header-anchor">#</a> 17、javascript 深拷贝和浅拷贝之如何对一个对象进行深度clone</h1> <blockquote><p>深拷贝和浅拷贝是针对复杂数据类型来说的，浅拷贝只拷贝一层，而深拷贝是层层拷贝。</p></blockquote> <p><strong>深拷贝</strong></p> <blockquote><p>深拷贝复制变量值，对于非基本类型的变量，则递归至基本类型变量后，再复制。深拷贝后的对象与原来的对象是完全隔离的，互不影响，对一个对象的修改并不会影响另一个对象。</p></blockquote> <p><strong>浅拷贝</strong></p> <blockquote><p>浅拷贝是会将对象的每个属性进行依次复制，但是当对象的属性值是引用类型时，实质复制的是其引用，当引用指向的值改变时也会跟着变化。</p></blockquote> <h3 id="浅拷贝"><a href="#浅拷贝" class="header-anchor">#</a> 浅拷贝</h3> <p>可以使用 <code>forin</code>、 <code>Object.assign</code>、 扩展运算符<code>...</code>、 <code>Array.prototype.slice()</code>、 <code>Array.prototype.concat()</code> 等实现浅拷贝。</p> <h5 id="下面代码使用-object-assign-实现浅拷贝"><a href="#下面代码使用-object-assign-实现浅拷贝" class="header-anchor">#</a> 下面代码使用 Object.assign 实现浅拷贝：</h5> <ul><li>只能保证第一层属性为基本类型<code>String|Number|Boolean|null|undefined|Symbol</code>时，新对象和原来对象互不影响（如：在给 res.name 赋值为'res1'后，test.name 没有改变）；</li> <li>如果第一层的属性是引用数据类型<code>Object|Array|Function|Date|RegExp</code>时，新对象和原对象的属性值指针指向的是同一块内存地址（如：res.arr[0]设置为'res1'后，test.arr[0]也变成'res1'）。</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>const <span class="token builtin class-name">test</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+	name: <span class="token string">'test'</span>,
+	arr: <span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+const res <span class="token operator">=</span> Object.assign<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span>, <span class="token builtin class-name">test</span><span class="token punctuation">)</span><span class="token punctuation">;</span> // <span class="token punctuation">{</span><span class="token punctuation">..</span>.test<span class="token punctuation">}</span> 相同效果
+res.name <span class="token operator">=</span> <span class="token string">'res1'</span><span class="token punctuation">;</span>
+res.arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'res1'</span><span class="token punctuation">;</span>
+console.log<span class="token punctuation">(</span>test.name<span class="token punctuation">)</span><span class="token punctuation">;</span>// <span class="token builtin class-name">test</span>
+console.log<span class="token punctuation">(</span>test.arr<span class="token punctuation">)</span><span class="token punctuation">;</span>// <span class="token punctuation">[</span><span class="token string">&quot;res1&quot;</span>, <span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">]</span>
+</code></pre></div><h3 id="深拷贝"><a href="#深拷贝" class="header-anchor">#</a> 深拷贝</h3> <ul><li>1.深拷贝最简单的实现是: <code>JSON.parse(JSON.stringify(obj))</code></li></ul> <p><strong><code>JSON.parse(JSON.stringify(obj))</code> 是最简单的实现方式，但是有一些缺陷：</strong></p> <ul><li>对象的属性值是函数时，无法拷贝。</li> <li>不能正确的处理 Date 类型的数据</li> <li>不能处理 RegExp</li> <li>会忽略 symbol</li> <li>会忽略 undefined</li> <li>原型链上的属性无法拷贝()</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>	<span class="token keyword">function</span> <span class="token function-name function">HH</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		this.hhname <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	HH.prototype.dd <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
+
+	var <span class="token builtin class-name">test</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+		name: <span class="token string">'haha'</span>,
+		date: new Date<span class="token punctuation">(</span><span class="token punctuation">)</span>,
+		height: null,
+		width: undefined,
+		arr: <span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">3</span>, <span class="token number">4</span><span class="token punctuation">]</span>,
+		func: <span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                console.log<span class="token punctuation">(</span><span class="token string">'test.func'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>,
+		proto: new HH<span class="token punctuation">(</span><span class="token punctuation">)</span>,
+		mysymbol: Symbol<span class="token punctuation">(</span><span class="token punctuation">)</span>,
+		reg: new RegExp<span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	var res1 <span class="token operator">=</span> JSON.parse<span class="token punctuation">(</span>JSON.stringify<span class="token punctuation">(</span>test<span class="token punctuation">))</span><span class="token punctuation">;</span>
+	console.log<span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	console.log<span class="token punctuation">(</span>res1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>效果如下</p> <p><img src="/20200917/001.jpg" alt="001"></p> <h3 id="实现一个-deepclone-函数"><a href="#实现一个-deepclone-函数" class="header-anchor">#</a> 实现一个 deepClone 函数</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>	var deepClone <span class="token operator">=</span> <span class="token punctuation">(</span>function f <span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		// Date  <span class="token operator">&amp;&amp;</span> RegExp <span class="token operator">&amp;&amp;</span> undefined<span class="token operator">&amp;&amp;</span>Symbol<span class="token operator">&amp;&amp;</span>Function<span class="token operator">&amp;&amp;</span>原型链
+		// 判断是否存在
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token builtin class-name">return</span> obj<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		// 判断是不是Date类型
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>obj instanceof Date<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token builtin class-name">return</span> new Date<span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		// 判断是不是RegExp
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>obj instanceof RegExp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token builtin class-name">return</span> new RegExp<span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		// 判断是不是null
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">==</span><span class="token operator">=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token builtin class-name">return</span> obj<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		// 判断是不是非对象
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>typeof obj <span class="token operator">!=</span><span class="token operator">=</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token builtin class-name">return</span> obj<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		// 判断是数组还是对象
+		var result <span class="token operator">=</span> obj instanceof Array ? <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token builtin class-name">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+		// 循环
+		<span class="token keyword">for</span> <span class="token punctuation">(</span>var key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			// 判断是不是自身的属性
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>obj.hasOwnProperty<span class="token punctuation">(</span>key<span class="token punctuation">))</span> <span class="token punctuation">{</span>
+				// 判断是不是对象，因为对象是引用类型，所以需要对引用类型（除了null 这个空对象，null属于基本类型，但是也是对象）再次使用该方法做递归处理
+				result<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> typeof obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'object'</span> ? f<span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token builtin class-name">:</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token builtin class-name">return</span> result<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	var res2 <span class="token operator">=</span> deepClone<span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/2020/09/16.html" class="prev">
+        16、javascript 中的 call 和 apply 实现原理
+      </a></span> <span class="next"><a href="/2020/09/18.html">
+        18、小程序rich-text组件改变内部img图片样式的方法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.617b9cc5.js" defer></script><script src="/assets/js/2.e6a2dc2d.js" defer></script><script src="/assets/js/9.ba70e4e9.js" defer></script>
+  </body>
+</html>

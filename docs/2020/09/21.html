@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>21、CSS阴影效果(Box-shadow)用法趣味讲解 |  前端小喵</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="前端小喵微信公众号文章项目">
+    <link rel="preload" href="/assets/css/0.styles.de540e03.css" as="style"><link rel="preload" href="/assets/js/app.617b9cc5.js" as="script"><link rel="preload" href="/assets/js/2.e6a2dc2d.js" as="script"><link rel="preload" href="/assets/js/13.63ebe8b2.js" as="script"><link rel="prefetch" href="/assets/js/10.581b745b.js"><link rel="prefetch" href="/assets/js/11.40b22ce3.js"><link rel="prefetch" href="/assets/js/12.f43cf7fc.js"><link rel="prefetch" href="/assets/js/14.61b2e0d9.js"><link rel="prefetch" href="/assets/js/15.db8383cc.js"><link rel="prefetch" href="/assets/js/16.c66a6f5a.js"><link rel="prefetch" href="/assets/js/17.4a43ce9a.js"><link rel="prefetch" href="/assets/js/18.359f3686.js"><link rel="prefetch" href="/assets/js/19.ff1188d2.js"><link rel="prefetch" href="/assets/js/20.0ca6ba22.js"><link rel="prefetch" href="/assets/js/21.8e7215a1.js"><link rel="prefetch" href="/assets/js/22.d9181e53.js"><link rel="prefetch" href="/assets/js/23.640322f2.js"><link rel="prefetch" href="/assets/js/24.697e6c10.js"><link rel="prefetch" href="/assets/js/25.2ce8c5b5.js"><link rel="prefetch" href="/assets/js/26.392ffc11.js"><link rel="prefetch" href="/assets/js/27.655295cb.js"><link rel="prefetch" href="/assets/js/28.0558477a.js"><link rel="prefetch" href="/assets/js/29.bf421f0c.js"><link rel="prefetch" href="/assets/js/3.824e2a13.js"><link rel="prefetch" href="/assets/js/30.618e115b.js"><link rel="prefetch" href="/assets/js/31.53d6cb81.js"><link rel="prefetch" href="/assets/js/32.3cbeba60.js"><link rel="prefetch" href="/assets/js/33.979d1d9a.js"><link rel="prefetch" href="/assets/js/34.c45827a1.js"><link rel="prefetch" href="/assets/js/35.1e847f3c.js"><link rel="prefetch" href="/assets/js/4.5ed19beb.js"><link rel="prefetch" href="/assets/js/5.25e1e9fa.js"><link rel="prefetch" href="/assets/js/6.ebf1154f.js"><link rel="prefetch" href="/assets/js/7.9fa2cd7c.js"><link rel="prefetch" href="/assets/js/8.d879a9fd.js"><link rel="prefetch" href="/assets/js/9.ba70e4e9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.de540e03.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt=" 前端小喵" class="logo"> <span class="site-name can-hide"> 前端小喵</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/emoji/" class="nav-link">
+  表情
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">资源</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">资源</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/resources/" class="nav-link">
+  公众号编辑工具
+</a></li><li class="dropdown-item"><!----> <a href="/images/noCopyright/" class="nav-link">
+  无版权图片
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/emoji/" class="nav-link">
+  表情
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">资源</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">资源</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/resources/" class="nav-link">
+  公众号编辑工具
+</a></li><li class="dropdown-item"><!----> <a href="/images/noCopyright/" class="nav-link">
+  无版权图片
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">微信公众号文章首页</a></li><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>本地图片资源</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/images/noCopyright.html" class="sidebar-link">无版权图片网站</a></li><li><a href="/images/guanzhu.html" class="sidebar-link">求关注</a></li><li><a href="/images/line.html" class="sidebar-link">分割线</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/" class="sidebar-heading clickable router-link-active open"><span>2020年09月文章</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/09/13.html" class="sidebar-link">13、经常要用到的但又总是记不住的样式</a></li><li><a href="/2020/09/14.html" class="sidebar-link">14、js常用数组的方法总结</a></li><li><a href="/2020/09/15.html" class="sidebar-link">15、bem css命名规范</a></li><li><a href="/2020/09/16.html" class="sidebar-link">16、javascript 中的 call 和 apply 实现原理</a></li><li><a href="/2020/09/17.html" class="sidebar-link">17、javascript 深拷贝和浅拷贝之如何对一个对象进行深度clone</a></li><li><a href="/2020/09/18.html" class="sidebar-link">18、小程序rich-text组件改变内部img图片样式的方法</a></li><li><a href="/2020/09/19.html" class="sidebar-link">19、前端SEO优化</a></li><li><a href="/2020/09/20.html" class="sidebar-link">20、 css常用和常用却容易忘记的样式合集</a></li><li><a href="/2020/09/21.html" aria-current="page" class="active sidebar-link">21、CSS阴影效果(Box-shadow)用法趣味讲解</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/2020/09/21.html#基本用法" class="sidebar-link">基本用法</a></li><li class="sidebar-sub-header"><a href="/2020/09/21.html#内阴影" class="sidebar-link">内阴影</a></li><li class="sidebar-sub-header"><a href="/2020/09/21.html#阴影扩展长度值" class="sidebar-link">阴影扩展长度值</a></li><li class="sidebar-sub-header"><a href="/2020/09/21.html#多重阴影" class="sidebar-link">多重阴影</a></li><li class="sidebar-sub-header"><a href="/2020/09/21.html#伪元素-before和-after的乐趣" class="sidebar-link">伪元素::before和::after的乐趣</a></li></ul></li><li><a href="/2020/09/22.html" class="sidebar-link">22、 记住这几个git命令，创建、查看、删除、重命名和tag就够了～</a></li><li><a href="/2020/09/23.html" class="sidebar-link">23、一文搞懂this指向问题</a></li><li><a href="/2020/09/24.html" class="sidebar-link">24、数据响应式原理剖析</a></li><li><a href="/2020/09/25.html" class="sidebar-link">25、请编写一个 JavaScript 函数 parseQueryString，它的用途是把 URL 参数解析为一个对象</a></li><li><a href="/2020/09/26.html" class="sidebar-link">26、call 和 apply 的区别</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/" class="sidebar-heading clickable router-link-active"><span>2020年10月文章</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/10/10.html" class="sidebar-link">koa-jsonp-demo</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_21、css阴影效果-box-shadow-用法趣味讲解"><a href="#_21、css阴影效果-box-shadow-用法趣味讲解" class="header-anchor">#</a> 21、CSS阴影效果(Box-shadow)用法趣味讲解</h1> <blockquote><p>使用Box-shadow属性表现阴影效果是现代浏览器中是一个非常有用的技巧，通过它我们可以做出很多非常酷的东西。让我们来一步一步的了解box-shadow属性的基本用法，然后进一步了解::before和::after伪元素的用法。
+原文来自链接：https://www.webhek.com/post/css-box-shadow-property.html</p></blockquote> <h2 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span> 1px 2px 3px #000<span class="token punctuation">;</span>
+<span class="token comment">/*1px代表x轴坐标值*/</span>
+<span class="token comment">/*2px代表y轴坐标值*/</span>
+<span class="token comment">/*#000代表阴影颜色*/</span>
+</code></pre></div><p><strong>1px</strong>代表x轴坐标值，<strong>2px</strong>代表y轴坐标值，<strong>#000</strong>代表阴影颜色。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span>2px 2px 5px #000<span class="token punctuation">;</span>
+</code></pre></div><p>图片：
+<img src="https://upload-images.jianshu.io/upload_images/7901810-e29921cad11fb617.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1600581847128.jpg"></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span>0px 0px 10px #000<span class="token punctuation">;</span>
+</code></pre></div><p>图片：
+<img src="https://upload-images.jianshu.io/upload_images/7901810-152af0d0f8496ddd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1600581895971.jpg"></p> <h2 id="内阴影"><a href="#内阴影" class="header-anchor">#</a> 内阴影</h2> <p><strong>inset</strong> 指定为内阴影</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span>inset 2px 2px 5px #000<span class="token punctuation">;</span>
+</code></pre></div><p><img src="https://upload-images.jianshu.io/upload_images/7901810-5b3b49c03c13522c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="内阴影.jpg"></p> <h2 id="阴影扩展长度值"><a href="#阴影扩展长度值" class="header-anchor">#</a> 阴影扩展长度值</h2> <p>第四个参数10px为阴影扩展长度值</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span>0px 0px 5px 10px #000<span class="token punctuation">;</span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span>0px 0px 5px 10px #000<span class="token punctuation">;</span>
+</code></pre></div><p>图片：
+<img src="https://upload-images.jianshu.io/upload_images/7901810-342c1a02fe5228dd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="长度扩展.jpg"></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span>0px 15px 10px -15px #000<span class="token punctuation">;</span>
+</code></pre></div><p>图片
+<img src="https://upload-images.jianshu.io/upload_images/7901810-e70145f8b9cef6f3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="长度扩展1.jpg"></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span>inset 0px 15px 10px -15px #000<span class="token punctuation">;</span>
+</code></pre></div><p><img src="https://upload-images.jianshu.io/upload_images/7901810-3eaa0e24c4a5c86a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="长度扩展2.jpg"></p> <h2 id="多重阴影"><a href="#多重阴影" class="header-anchor">#</a> 多重阴影</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-shadow</span><span class="token punctuation">:</span> 0px 0px 0px 3px #F08080<span class="token punctuation">,</span>
+            0px 0px 0px 6px #ffff00<span class="token punctuation">,</span>
+            0px 0px 0px 9px #EE7AE9<span class="token punctuation">;</span>
+</code></pre></div><p>图片：
+<img src="https://upload-images.jianshu.io/upload_images/7901810-e6555ca252dee7b6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1600582762373.jpg"></p> <h2 id="伪元素-before和-after的乐趣"><a href="#伪元素-before和-after的乐趣" class="header-anchor">#</a> 伪元素::before和::after的乐趣</h2> <p>使用伪元素::before和::after，我们能创造出非常逼真的只有图片才能实现的阴影效果。让我来看一个例子：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box box-shadow<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box-shadow</span> <span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">max-width</span><span class="token punctuation">:</span> 270px<span class="token punctuation">;</span>
+	<span class="token property">box-shadow</span><span class="token punctuation">:</span> 0px 1px 4px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0.3<span class="token punctuation">)</span><span class="token punctuation">,</span>
+				0px 0px 20px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0.1<span class="token punctuation">)</span> inset<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box-shadow::before,
+.box-shadow::after</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span>absolute<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span>-1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box-shadow::before,
+.box-shadow::after</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span>absolute<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span>-1<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span>15px<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>50%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>20%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box-shadow::before,
+.box-shadow::after</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span>absolute<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span>-1<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span>15px<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>50%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>20%<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span>0 15px 10px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">rotate</span><span class="token punctuation">(</span>-3deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box-shadow::after</span><span class="token punctuation">{</span>
+  <span class="token property">right</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span>auto<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">rotate</span><span class="token punctuation">(</span>3deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>图片：
+<img src="https://upload-images.jianshu.io/upload_images/7901810-a6487ec4168f99ab.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1600583057795.jpg"></p> <p>欢迎关注<strong>前端小喵</strong>公众号更多好文推荐哦～</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/2020/09/20.html" class="prev">
+        20、 css常用和常用却容易忘记的样式合集
+      </a></span> <span class="next"><a href="/2020/09/22.html">
+        22、 记住这几个git命令，创建、查看、删除、重命名和tag就够了～
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.617b9cc5.js" defer></script><script src="/assets/js/2.e6a2dc2d.js" defer></script><script src="/assets/js/13.63ebe8b2.js" defer></script>
+  </body>
+</html>
