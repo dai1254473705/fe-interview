@@ -1,0 +1,14 @@
+{
+  "name": "boxen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "4.2.0"
+  }
+}
