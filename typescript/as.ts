@@ -10,7 +10,13 @@ type Getters<Type> = {
 interface Person {
     name: string;
     age: number;
-    location: string
+    location: string;
+    1:number;
 }
 
 type LazyPerson = Getters<Person>
+
+type GetRealName<T> = {
+    [P in keyof T as `Real${number & P}`]:T[P];
+}
+type LazyPersona = GetRealName<Person>
