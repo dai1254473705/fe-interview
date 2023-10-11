@@ -1,4 +1,6 @@
 import { defineConfig } from 'dumi';
+// const logo = require('./images/logo.jpg');
+// const ico = require('./images/favicon.ico');
 
 //github仓库名称
 // const defaultPath = '/fe-interview';
@@ -6,8 +8,9 @@ const defaultPath = '';
 //打包后gh-pages默认会拼接仓库名称在路径上
 const baseUrl = process.env.NODE_ENV === 'production' ? defaultPath : '';
 export default defineConfig({
-  base: defaultPath,
-  publicPath: `${baseUrl}/`,
+  // base: defaultPath,
+  base: '/',
+  // publicPath: `${baseUrl}/`,
   resolve: {
     docDirs: ['document'],
     // atomDirs: [{ type: 'component', dir: '../src/components/' }],
@@ -15,21 +18,21 @@ export default defineConfig({
   },
   // favicons: [
   //   // 完整地址
-  //   'https://cloud.static.chanjet.com/ydzee/ydzfavicon.ico',
   // ],
   outputPath: 'docs',
   themeConfig: {
-    name: '前端面试题',
+    name: '鸭梨博客',
     hd: { rules: [] },
     rtl: true,
-    // favicon: `https://cloud.static.chanjet.com/ydzee/ydzfavicon.ico`,
-    // logo: '/image/default-icon.png',
+    favicons: ['/image/favicon.ico'],
+    logo: '/image/logo.jpg',
     footer: ``,
     prefersColor: { default: 'auto' },
     socialLinks: {
-      // github: 'https://gitlab.rd.chanjet.com/hsy_ng/ydz-workbench',
+      github: 'https://github.com/dai1254473705/fe-interview',
     },
   },
+  hash: true,
   // apiParser: {},
   locales: [{ id: 'zh-CN', name: '中文' }],
   chainWebpack(memo) {
