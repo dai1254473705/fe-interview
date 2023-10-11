@@ -1,6 +1,12 @@
 import { defineConfig } from 'dumi';
 
+//github仓库名称
+const defaultPath = '/fe-interview';
+//打包后gh-pages默认会拼接仓库名称在路径上
+const baseUrl = process.env.NODE_ENV === 'production' ? defaultPath : '';
 export default defineConfig({
+  base: defaultPath,
+  publicPath: `${baseUrl}/`,
   resolve: {
     docDirs: ['document'],
     // atomDirs: [{ type: 'component', dir: '../src/components/' }],
@@ -25,10 +31,18 @@ export default defineConfig({
   },
   // apiParser: {},
   locales: [{ id: 'zh-CN', name: '中文' }],
-  // "homepage": "/fe-interview/",
   chainWebpack(memo) {
     // memo 当前 webpack-chain 对象
     // memo.plugins.delete('copy'); // 会导致访问不到静态文件
   },
-  publicPath: '/fe-interview/',
+  // extraBabelPlugins: [
+  //   [
+  //     'babel-plugin-import',
+  //     {
+  //       libraryName: 'antd', //配置antd全局样式
+  //       libraryDirectory: 'es',
+  //       style: true,
+  //     },
+  //   ],
+  // ],
 });
