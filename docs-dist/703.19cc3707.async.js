@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfe_interview=self.webpackChunkfe_interview||[]).push([[703],{93703:function(i,t,n){n.r(t),n.d(t,{Foo:function(){return e}});var s=n(67294),o=n(85893),u=function(r){return(0,o.jsx)("h4",{children:r.title})},e=u}}]);
