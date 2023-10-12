@@ -21,7 +21,7 @@ export default defineConfig({
   // ],
   outputPath: 'docs',
   themeConfig: {
-    name: '鸭梨博客',
+    name: '前端知识库',
     hd: { rules: [] },
     rtl: true,
     favicons: ['/image/favicon.ico'],
