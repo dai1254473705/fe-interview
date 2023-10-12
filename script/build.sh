@@ -6,11 +6,13 @@ yarn docs:build
 log "构建完成"
 
 log "写入构建日志"
+BUILD_DATE=`date "+%Y-%m-%d %H:%M:%S"`
 cat >> docs/index.html <<- EOF
-
+<script>
 ;(function(){
   console.log('%cBUILD_DATE: %c%s', 'color: gray;', 'color: blue;', '${BUILD_DATE}');
 })();
+</script>
 EOF
 
 log "提交代码"
