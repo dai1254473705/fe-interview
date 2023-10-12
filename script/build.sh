@@ -18,7 +18,7 @@ EOF
 log "提交代码"
 git add .
 git commit -m "[build]: auto commit"
-
+git push
 log "提交完成"
 # delete dist folder
 # shopt -s extglob
