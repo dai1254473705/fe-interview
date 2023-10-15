@@ -11,8 +11,8 @@ const WhoAreUsing: FC = () => {
         </a>
       </li>
       <li>
-        <a href="/designMode" target="_blank" rel="noreferrer">
-          <img src="/image/designMode.png" alt="designMode" />
+        <a href="/design-mode" target="_blank" rel="noreferrer">
+          <img src="/image/designMode.png" alt="design-mode" />
           设计模式
         </a>
       </li>

@@ -21,7 +21,7 @@ export default defineConfig({
   // ],
   outputPath: 'docs',
   themeConfig: {
-    name: '前端知识库',
+    name: '小代笔记',
     hd: { rules: [] },
     rtl: true,
     favicons: ['/image/favicon.ico'],
