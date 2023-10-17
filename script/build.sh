@@ -15,6 +15,9 @@ cat >> docs/index.html <<- EOF
 </script>
 EOF
 
+# 复制CNAME到docs
+cp ../CNAME ./docs
+
 log "提交代码"
 git add .
 git commit -m "[build]: auto commit"

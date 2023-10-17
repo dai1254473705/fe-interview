@@ -7,10 +7,11 @@
 + [html](/base/html)
 + [设计模式](/base/designMode)
 + [算法](/base/algorithm)
-+ typescript
-+ uml
-+ react
-+ vue
-+ 理论知识
++ [babel](/base/babel)
++ [typescript](/base/typescript)
++ [uml](/base/uml)
++ [react](/base/react)
++ [vue](/base/vue)
++ [理论知识](/base/theory)
 
 
