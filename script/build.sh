@@ -16,7 +16,7 @@ cat >> docs/index.html <<- EOF
 EOF
 
 # 复制CNAME到docs
-cp ../CNAME ./docs
+cp CNAME ./docs
 
 log "提交代码"
 git add .
