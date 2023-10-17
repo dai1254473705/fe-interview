@@ -45,9 +45,105 @@ const ff = function ff() {};
 
 就像插件一样，你也可以根据自己所需要的插件组合创建一个自己的 preset 并将其分享出去。
 
-最常用的预设如下，@babel/preset-env所包含的插件将支持所有最新的 JavaScript （ES2015、ES2016 等）特性：
+最常用的预设如下，@babel/preset-env 所包含的插件将支持所有最新的 JavaScript （ES2015、ES2016 等）特性：
+
 ```bash
 yarn add --dev @babel/preset-env
 ```
 
-### 配置
+### Polyfill
+
+> yarn add core-js
+
+使用`@babel/preset-env`预设时，通过设置`"useBuiltIns": "usage"`，同时指定`corejs`版本，就会自动根据需要加载对应的兼容 polyfill 代码
+
+```bash
+[
+    "@babel/preset-env",
+    {
+    "useBuiltIns": "usage",
+    "corejs": "3.6.5"
+    }
+]
+```
+
+如下：
+
+```jsx | pure
+const ff = () => {
+  return new Promise((resolve, reject) => {
+    resolve(true);
+  });
+};
+// converted to
+('use strict');
+
+require('core-js/modules/es.object.to-string.js');
+require('core-js/modules/es.promise.js');
+var ff = function ff() {
+  return new Promise(function (resolve, reject) {
+    resolve(true);
+  });
+};
+```
+
+上面的是全局范围引入的，可能会造成污染，可以使用`@babel/plugin-transform-runtime`避免：
+
+详见：https://www.babeljs.cn/docs/babel-plugin-transform-runtime
+
+> yarn add --dev @babel/plugin-transform-runtime
+> 根据 corejs 设置的 2 或者 3，选择性安装：yarn add @babel/runtime-corejs3 || yarn add @babel/runtime-corejs2
+
+!!此时，presets不能设置``useBuiltIns``;
+
+```bash
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        //     "targets": {
+        //       "edge": "17",
+        //       "firefox": "60",
+        //       "chrome": "67",
+        //       "safari": "11.1"
+        //     },
+        // "useBuiltIns": "usage",
+        // "corejs": "3.33.0"
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3
+      }
+    ]
+  ]
+}
+```
+
+编译
+
+```jsx | pure
+const ff = () => {
+  return new Promise((resolve, reject) => {
+    resolve(true);
+  });
+};
+// converted to
+('use strict');
+
+var _interopRequireDefault = require('@babel/runtime-corejs3/helpers/interopRequireDefault');
+var _promise = _interopRequireDefault(
+  require('@babel/runtime-corejs3/core-js-stable/promise'),
+);
+var ff = function ff() {
+  return new _promise['default'](function (resolve, reject) {
+    resolve(true);
+  });
+};
+```
+## 总结
+我们使用 @babel/cli 从终端运行 Babel，利用 @babel/polyfill 来模拟所有新的 JavaScript 功能，而 env preset 只对我们所使用的并且目标浏览器中缺失的功能进行代码转换和加载 polyfill。
