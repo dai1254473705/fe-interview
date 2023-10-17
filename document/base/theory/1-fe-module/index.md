@@ -1,3 +1,7 @@
+---
+title: 前端模块化
+order: 1
+---
 # 前端模块化
 
 ## 一、模块化简述
@@ -71,7 +75,7 @@
 </script>
 ```
 
-![](./1-fe-module/1.png)
+![](./1.png)
 
 ```bash
 <script type="module">
@@ -83,7 +87,7 @@
 </script>
 ```
 
-![](./1-fe-module/2.png)
+![](./2.png)
 
 > 在浏览器中,引入相同的`nomodule` 脚本会被执行多次,而模块只会被执行一次:
 
@@ -96,13 +100,13 @@
 <script type="module" src="./main.js"></script>
 ```
 
-![](./1-fe-module/3.png)
+![](./3.png)
 
 ## 六、 模块的默认延迟
 
 > 默认情况下,nomodule 脚本会阻塞 HTML 解析。你可以通过添加 defer 属性来解决此问题,该属性是等到 HTML 解析完成之后才执行。
 
-![](./1-fe-module/4.png)
+![](./4.png)
 
 - defer 和 async 是一个可选属性,他们只可以选择其中一个,在 nomodule 脚本下,defer 等到 HTML 解析完才会解析当前脚本,而 async 会和 HTML 并行解析,不会阻塞 HTML 的解析,模块脚本可以指定 async 属性,但对于 defer 无效,因为模块默认就是延迟的。
 
@@ -188,8 +192,8 @@ import {name, age} from 'modulename' 导入模块可以使用到name和age的值
 5. 导入的是一个对象，对象的属性读写不受影响 name.xxx = 'xxx' // 正常
    如：
 
-![](./1-fe-module/5.png)
-![](./1-fe-module/6.png)
+![](./5.png)
+![](./6.png)
 
 ## 八、ES Modules 导入
 
@@ -364,9 +368,9 @@ package.json:
 
 > **深度优先搜索算法**（英语：Depth-First-Search，DFS）是一种用于遍历或搜索树或图的算法。这个算法会尽可能深地搜索树的分支。当节点 v 的所在边都己被探寻过，搜索将回溯到发现节点 v 的那条边的起始节点。这一过程一直进行到已发现从源节点可达的所有节点为止。如果还存在未被发现的节点，则选择其中一个作为源节点并重复以上过程，整个进程反复进行直到所有节点都被访问为止。
 
-![](./1-fe-module/7.png)
+![](./7.png)
 循环引用：initialization 错误,防止死循环
-![](./1-fe-module/8.png)
+![](./8.png)
 
 #### CommonJs 特性
 
