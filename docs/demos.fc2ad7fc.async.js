@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfe_interview=self.webpackChunkfe_interview||[]).push([[433],{30378:function(a,n,e){e.r(n),e.d(n,{default:function(){return u}});var c=e(67294),t=e(85893),s=function(){return(0,t.jsx)("div",{className:"css-demo-1"})},u=s}}]);
