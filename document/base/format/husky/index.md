@@ -1,6 +1,6 @@
 ---
 title: 基于husky实现git提交代码前校验
-order: 1
+order: 2
 ---
 
 # 基于 husky 实现 git 提交代码前校验
