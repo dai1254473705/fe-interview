@@ -19,12 +19,12 @@ export default defineConfig({
   // favicons: [
   //   // 完整地址
   // ],
+  favicons: ['/image/favicon.ico'],
   outputPath: 'docs',
   themeConfig: {
     name: '小代笔记',
     hd: { rules: [] },
     rtl: true,
-    favicons: ['/image/favicon.ico'],
     logo: '/image/logo.jpg',
     footer: ``,
     prefersColor: { default: 'auto' },
