@@ -10,7 +10,7 @@ const baseUrl = process.env.NODE_ENV === 'production' ? defaultPath : '';
 export default defineConfig({
   base: defaultPath,
   // base: '/',
-  // publicPath: `${baseUrl}/`,
+  publicPath: `${baseUrl}/`,
   resolve: {
     docDirs: ['document'],
     // atomDirs: [{ type: 'component', dir: '../src/components/' }],
