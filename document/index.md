@@ -1,7 +1,7 @@
 ---
 hero:
   title: Front End
-  description: 古之作书必有序，今之为笔记而序。
+  description: 
   actions:
     - text: 开始
       link: /base
