@@ -6,7 +6,9 @@
 
 - <a target="_blank" href="../../public/book/[科学素养文库·科学元典丛书] [英]达尔文 - 物种起源 (2005, 北京大学出版社) - libgen.li.pdf">[英]达尔文 - 物种起源 (2005, 北京大学出版社)</a>
 
-- <a target="_blank" href="../../public//book/[鲁迅全集] 鲁迅 - 鲁迅全集（第01卷：坟、热风、呐喊） 1 (2005, 人民文学出版社) - libgen.li.pdf"> 鲁迅全集(2005, 人民文学出版社)</a>
+- <a target="_blank" href="../../public/book/[鲁迅全集] 鲁迅 - 鲁迅全集（第01卷：坟、热风、呐喊） 1 (2005, 人民文学出版社) - libgen.li.pdf"> 鲁迅全集(2005, 人民文学出版社)</a>
+
+- <a target="_blank" href="../../public/book/鲁迅全集（全18卷）人民文学出版社2005版.pdf">鲁迅全集（全18卷）人民文学出版社2005版.pdf</a>
 
 - <a target="_blank" href="../../public/book/[唐宋史料笔记丛刊] 王仁裕_ 姚汝能_ 曾贻芬点校 - 开元天宝遗事 安禄山事迹 (2006, 中华书局) - libgen.li.pdf">开元天宝遗事 安禄山事迹 (2006, 中华书局)</a>
 
@@ -24,12 +26,24 @@
 
 - <a target="_blank" href="../../public/book/路遥 - 平凡的世界：第三部【新中国70年版】 (北京十月文艺出版社) - libgen.li.pdf">路遥 - 平凡的世界：第三部【新中国70年版】 (北京十月文艺出版社)</a>
 
-- <a target="_blank" href="../../public/book/前端白盒测试(单测)如何布道.pdf">前端白盒测试(单测)如何布道</a>
-
 - <a target="_blank" href="../../public/book/前端百题斩（上）.pdf">前端百题斩（上）</a>
-
-- <a target="_blank" href="../../public/book/前端单元测试.pdf">前端单元测试</a>
 
 - <a target="_blank" href="../../public/book/钱钟书 - 围城 (1947) - libgen.li.pdf">钱钟书 - 围城 (1947)</a>
 
 - <a target="_blank" href="http://read.yongledadian.com.cn/">永乐大典（未读）</a>
+
+- <a target="_blank" href="../../public/book/[美国纽约摄影学院摄影教材（上册）].美国纽约摄影学院.高清版.pdf"> [美国纽约摄影学院摄影教材（上册）].美国纽约摄影学院.高清版</a>
+
+- <a target="_blank" href="../../public/book/[美国纽约摄影学院摄影教材（下册）].美国纽约摄影学院.高清版.pdf"> [美国纽约摄影学院摄影教材（下册）].美国纽约摄影学院.高清版</a>
+
+- <a target="_blank" href="../../public/book/2023前端面试八股文(1)(1).pdf">2023前端面试八股文(1)(1)</a>
+
+- <a target="_blank" href="../../public/book/摄影师之眼.pdf">摄影师之眼</a>
+
+- <a target="_blank" href="../../public/book/照片的本质-斯蒂芬·肖尔.pdf">照片的本质-斯蒂芬·肖尔</a>
+
+- <a target="_blank" href="../../public/book/GitHub入门与实践.pdf">GitHub入门与实践</a>
+
+- <a target="_blank" href="../../public/book/P8大佬的算法解题笔记(14).pdf">P8大佬的算法解题笔记</a>
+
+- <a target="_blank" href="../../public/book/uml.pdf">uml</a>
