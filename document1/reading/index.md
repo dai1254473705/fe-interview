@@ -1,4 +1,8 @@
-# 读书
+---
+title: 读书
+order: 1
+visible: false
+---
 
 ## 目录
 - <a target="_blank" href="/book/曾国藩唐浩明版.pdf">曾国藩唐浩明版</a>

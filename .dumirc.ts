@@ -12,25 +12,31 @@ export default defineConfig({
   base: '/',
   // publicPath: `${baseUrl}/`,
   resolve: {
-    docDirs: ['document'],
+    docDirs: [
+      'document',
+      // 'document1',
+    ],
     // atomDirs: [{ type: 'component', dir: '../src/components/' }],
     // entryFile: '../src/components/index.ts',
   },
   // favicons: [
   //   // 完整地址
   // ],
-  favicons: ['/image/favicon.ico'],
+  favicons: ['/image/favicon1.ico'],
   outputPath: 'docs',
   themeConfig: {
-    name: '小代笔记',
+    // name: '小代笔记',
+    name: '小慧笔记',
     hd: { rules: [] },
     rtl: true,
-    logo: '/image/logo.jpg',
+    // logo: '/image/logo.jpg',
+    logo: '/image/logo1.png',
     footer: ``,
     prefersColor: { default: 'auto' },
-    socialLinks: {
-      github: 'https://github.com/dai1254473705/fe-interview',
-    },
+    // socialLinks: {
+    //   github: 'https://github.com/dai1254473705/fe-interview',
+    // },
+    lastUpdated: false,
   },
   hash: true,
   // apiParser: {},

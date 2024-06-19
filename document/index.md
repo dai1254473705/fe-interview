@@ -5,8 +5,8 @@ hero:
   actions:
     - text: 开始
       link: /base
-    - text: github
-      link: https://github.com/dai1254473705/fe-interview
+    # - text: github
+    #   link: https://github.com/dai1254473705/fe-interview
 
 features:
   - title: 王夫之
