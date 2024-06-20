@@ -12,5 +12,6 @@
 + [vue](/base/vue)
 + [理论知识](/base/theory)
 + [格式化](/base/format)
++ [开发调试技巧](/base/debug)
 
 
