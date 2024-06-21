@@ -1,0 +1,21 @@
+// 适用于覆盖 dumi 默认主题或三方主题包的样式，该文件中的规则会自动提升一层优先级确保覆盖生效
+
+.dumi-default-navbar>li>.dumi-default-navbar-dropdown>li>a {
+  line-height: 28px;
+  text-align: center;
+  height: 28px;
+  width: 120px;
+  &:hover {
+    transform: scale(0.9);
+    background-color: #e2eeff;
+  }
+}
+.dumi-default-sidebar{
+  &:hover {
+    width: auto;
+  }
+}
+
+.dumi-default-navbar > li:not(:last-child){
+  margin-inline-end: 25px;
+}

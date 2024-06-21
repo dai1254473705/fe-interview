@@ -1,3 +1,5 @@
+node ./script/generate.js
+
 log() {
   printf "[scripts/build.sh] : %s\n" "$1"
 }
