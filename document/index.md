@@ -1,13 +1,16 @@
 ---
 hero:
   title: Front End
-  description: 
+  description: 总结前端面试题，学习前端技术
   actions:
-    - text: 开始
-      link: /base
-    # - text: github
-    #   link: https://github.com/dai1254473705/fe-interview
-
+    - text: 前端面试题
+      link: /frontendbasics
+    - text: 前端基础
+      link: /frontendbasics
+    - text: 我的github首页
+      link: https://github.com/sunshineyanghui
+    - text: github项目地址
+      link: https://github.com/dai1254473705/fe-interview
 features:
   - title: 王夫之
     emoji: 🍊
@@ -30,5 +33,5 @@ features:
 ---
 
 ## 快捷入口
-
 <DocTypeList></DocTypeList>
+
