@@ -1,6 +1,6 @@
 {
   "name": "fe-interview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "前端面试题",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,8 @@
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepublishOnly": "father doctor && npm run build",
+    "release": "commit-and-tag-version"
   },
   "authors": [
     "1254473705@qq.com"
@@ -73,6 +74,7 @@
     "stylelint": "^14.9.1"
   },
   "dependencies": {
-    "antd": "^5.10.1"
+    "antd": "^5.10.1",
+    "commit-and-tag-version": "^12.4.1"
   }
 }
