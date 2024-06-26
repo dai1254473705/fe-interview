@@ -1,6 +1,6 @@
 {
   "name": "fe-interview",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "前端面试题",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,7 +17,7 @@
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepublishOnly": "father doctor && npm run build",
-    "release": "commit-and-tag-version"
+    "changelog": "commit-and-tag-version"
   },
   "authors": [
     "1254473705@qq.com"
