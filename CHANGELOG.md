@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.5](https://github.com/dai1254473705/fe-interview/compare/v0.0.4...v0.0.5) (2024-12-19)
+
+
+### Features
+
+* 添加包管理目录 ([6fbe839](https://github.com/dai1254473705/fe-interview/commit/6fbe8391e58cb3c92ef90d3c538309f97954347d))
+* 添加包管理文章 ([f865256](https://github.com/dai1254473705/fe-interview/commit/f865256815025fb8c0ef4667dbf29b9ae8700a36))
+
 ## [0.0.4](https://github.com/dai1254473705/fe-interview/compare/v0.0.3...v0.0.4) (2024-06-26)
 
 ## [0.0.3](https://github.com/dai1254473705/fe-interview/compare/v0.0.2...v0.0.3) (2024-06-26)
