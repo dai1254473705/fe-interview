@@ -1,64 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<title>请描述原生js里bind函数的作用，什么场景需要用到它，并手写Function.bind函数</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
-<style>
-html{
-  font-size: 100px;
-}
-p {
-  /*14px: 14 / 100 =0.14 rem*/
-  font-size: 0.14rem;
-}
-</style>
 
 <body>
-	<p>请描述原生js里bind函数的作用，什么场景需要用到它，并手写Function.bind函数</p>
-	<p>主要作用是改变函数中的this指向</p>
 </body>
-<script type="text/javascript">
-	window.onload = function () {
-		Function.prototype.bind = function (context) {
-			// 获取到bind第一个参数（要绑定的函数）之外的参数数组；
-			// args: [234,23443]
-			var args = Array.prototype.slice.call(arguments, 1);
+<script>
+	/**
+	 * The default chaining behavior can be implemented inside a base handler class.
+	 */
+	class AbstractHandler {
+		nextHandler;
 
-			// 缓存当前this
-			var currentThis = this;
-			// 创建一个新的函数
-			var NewFunc = new Function();
-			var bind = function () {
-				// 获取到执行对应绑定方法时接手到的参数
-				// innerArgs: [12]
-				var innerArgs = Array.prototype.slice.call(arguments);
-				// 合并所有参数
-				// finalArgs: [234, 23443, 12]
-				var finalArgs = args.concat(innerArgs);
-				return currentThis.apply(
-					this instanceof currentThis ? this : context,
-					finalArgs,
-				);
-			};
-			NewFunc.prototype = currentThis.prototype;
-			bind.prototype = new NewFunc();
-			return bind;
-		};
+		setNext(handler) {
+			this.nextHandler = handler;
+			// Returning a handler from here will let us link handlers in a
+			// convenient way like this:
+			// monkey.setNext(squirrel).setNext(dog);
+			return handler;
+		}
 
-		function ss() {
-			this.state = {
-				name: '12',
-			};
+		handle(request) {
+			if (this.nextHandler) {
+				return this.nextHandler.handle(request);
+			}
+			return null;
 		}
-		function bb() {
-			console.log(arguments, this); //[234, 23443, 12] , ss
+	}
+
+	/**
+	 * All Concrete Handlers either handle a request or pass it to the next handler
+	 * in the chain.
+	 */
+	class MonkeyHandler extends AbstractHandler {
+		handle(request) {
+			if (request === 'Banana') {
+				return `MonkeyHandler ${request}.`;
+			}
+			return super.handle(request);
 		}
-		bb.bind(ss, 234, 23443)(12);
-	};
+	}
+
+	class SquirrelHandler extends AbstractHandler {
+		handle(request) {
+			if (request === 'Nut') {
+				return `SquirrelHandler ${request}.`;
+			}
+			return super.handle(request);
+		}
+	}
+
+	class DogHandler extends AbstractHandler {
+		handle(request) {
+			if (request === 'MeatBall') {
+				return `DogHandler ${request}.`;
+			}
+			return super.handle(request);
+		}
+	}
+
+	/**
+	 * The client code is usually suited to work with a single handler. In most
+	 * cases, it is not even aware that the handler is part of a chain.
+	 */
+	function clientCode(handler) {
+		const foods = ['Nut', 'Banana', 'Cup of coffee'];
+
+		for (const food of foods) {
+			const result = handler.handle(food);
+			if (result) {
+				console.log(`  ${result}`);
+			} else {
+				console.log(`  ${food} was left untouched.`);
+			}
+		}
+	}
+
+	/**
+	 * The other part of the client code constructs the actual chain.
+	 */
+	const monkey = new MonkeyHandler();
+	const squirrel = new SquirrelHandler();
+	const dog = new DogHandler();
+
+	monkey.setNext(squirrel).setNext(dog);
+
+	/**
+	 * The client should be able to send a request to any handler, not just the
+	 * first one in the chain.
+	 */
+	console.log('Chain: Monkey > Squirrel > Dog\n');
+	clientCode(monkey);
+	// console.log('Subchain: Squirrel > Dog\n');
+	// clientCode(squirrel);
 </script>
 
 </html>
