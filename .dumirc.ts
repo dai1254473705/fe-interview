@@ -33,9 +33,9 @@ export default defineConfig({
     logo: '/image/logo1.png',
     footer: ``,
     prefersColor: { default: 'auto' },
-    // socialLinks: {
-    //   github: 'https://github.com/dai1254473705/fe-interview',
-    // },
+    socialLinks: {
+      github: 'https://github.com/dai1254473705/fe-interview',
+    },
     lastUpdated: false,
   },
   hash: true,
