@@ -36,7 +36,7 @@ export default defineConfig({
     socialLinks: {
       github: 'https://github.com/dai1254473705/fe-interview',
     },
-    lastUpdated: false,
+    lastUpdated: true,
   },
   hash: true,
   // apiParser: {},
