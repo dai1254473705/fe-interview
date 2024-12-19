@@ -1,4 +1,4 @@
 # nodejs
 
 + [koa](/nodejs/koa)
-+ [package-manage](/nodejs/package-manage)
++ [包管理](/nodejs/npm_yarn_pnpm)
