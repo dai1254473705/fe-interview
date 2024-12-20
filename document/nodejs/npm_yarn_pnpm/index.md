@@ -1,6 +1,4 @@
----
-title: 包管理
----
+# 包管理
 
 + [1. 如何发布代码到npm](/nodejs/npm_yarn_pnpm/1)
 + [2. 基于nvm 管理多个node版本](/nodejs/npm_yarn_pnpm/2)

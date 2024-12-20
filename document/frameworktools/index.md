@@ -1,4 +1,4 @@
-# 框架工具
+# 框架
 
 + [babel](/frameworktools/babel)
 + [react](/frameworktools/react)

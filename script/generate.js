@@ -47,19 +47,19 @@ function generatefile(fileData) {
 const fileList = [
   {
     dir: 'backend',
-    name: '后端相关',
+    name: '后端',
   },
   {
     dir: 'devstandards',
-    name: '开发规范',
+    name: '规范',
   },
   {
     dir: 'devtools',
-    name: '开发工具',
+    name: '工具',
   },
   {
     dir: 'frameworktools',
-    name: '框架工具',
+    name: '框架',
   },
   {
     dir: 'frontendbasics',
@@ -67,7 +67,7 @@ const fileList = [
   },
   {
     dir: 'nodejs',
-    name: 'nodejs',
+    name: 'node',
   },
   {
     dir: 'photography',

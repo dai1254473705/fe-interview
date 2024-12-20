@@ -1,4 +1,4 @@
-# 开发工具
+# 工具
 
 + [开发调试技巧](/devtools/debug)
 + [Git](/devtools/git)

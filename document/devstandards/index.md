@@ -1,3 +1,3 @@
-# 开发规范
+# 规范
 
 + [code](/devstandards/code)
