@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.12](https://github.com/dai1254473705/fe-interview/compare/v0.0.11...v0.0.12) (2024-12-26)
+
 ## [0.0.11](https://github.com/dai1254473705/fe-interview/compare/v0.0.10...v0.0.11) (2024-12-26)
 
 ## [0.0.10](https://github.com/dai1254473705/fe-interview/compare/v0.0.9...v0.0.10) (2024-12-26)
