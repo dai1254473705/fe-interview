@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/dai1254473705/fe-interview/compare/v0.0.5...v0.0.6) (2024-12-26)
+
+
+### Features
+
+* 添加文档 ([f2b0682](https://github.com/dai1254473705/fe-interview/commit/f2b068226e8fd4c4c25d6d8d9ff7947d18f0845e))
+
 ## [0.0.5](https://github.com/dai1254473705/fe-interview/compare/v0.0.4...v0.0.5) (2024-12-19)
 
 
