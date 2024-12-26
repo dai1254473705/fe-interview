@@ -1,5 +1,11 @@
+log() {
+  printf "开始生成目录"
+}
 node ./script/generateMd.js
-
+log() {
+  printf "开始生成changelog"
+}
+yarn changelog
 log() {
   printf "[scripts/build.sh] : %s\n" "$1"
 }
