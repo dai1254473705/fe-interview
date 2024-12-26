@@ -1,24 +1,22 @@
 {
   "name": "fe-interview",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "前端面试题",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "npm run dev",
     "dev": "dumi dev",
     "build": "father build",
-    "pub": "sh ./script/publish.sh",
-    "generage": "sh ./script/publish.sh",
     "build:watch": "father dev",
     "docs:build": "dumi build",
-    "ge:docdir": "node ./script/generate.js",
     "prepare": "husky install && dumi setup",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepublishOnly": "father doctor && npm run build",
+    "pub": "sh ./script/publish.sh",
+    "gemd": "node ./script/generateMd.js",
     "changelog": "commit-and-tag-version"
   },
   "authors": [
