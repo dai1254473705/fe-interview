@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const allContent = [];
 const baseUrl = 'https://fe.netyali.cn';
+const updateLog = [];
 // 读取 index.md 的标题
 const getTitleFromIndexMd = (dir) => {
   const indexPath = path.join(dir, 'index.md');
@@ -38,6 +39,10 @@ const writeMd = (targetDir, fullContent) => {
     return;
   }
   allContent.push(fullContent);
+  updateLog.push({
+    path: outputFilePath,
+    content: fullContent,
+  });
   fs.writeFileSync(outputFilePath, fullContent, 'utf8');
   // console.log(`${targetDir}/index.md 文件已生成：`);
 }
@@ -91,10 +96,26 @@ const readmeFilePath = path.join(targetDir, '../README.md');
 fs.writeFileSync(readmeFilePath, replaceContent, 'utf8');
 console.log(`${readmeFilePath} 文件已生成：`);
 
+// 从 updateLog 目录中读取是否有上一次的更新记录，记录为 updateLog.json 文件
+const updateLogDir = path.join(__dirname, '../updateLog.json');
+// 判断上一次的文件内容的差异，找到新增的文件和移出的文件，放到两个不同的数组中
+// 如果上一次文件不存在，则今天的文件就是新增的文件
+const lastUpdateLog = fs.existsSync(updateLogDir) ? JSON.parse(fs.readFileSync(updateLogDir, 'utf8')) : [];
+// 找到新增的文件
+const addPath = updateLog.filter(item => {
+  return !lastUpdateLog.find(lastItem => lastItem.path === item.path);
+});
+// 将removePath和addPath对应的content拼起来放到 updateLog.json 文件中
+const todayContent = addPath.map(item => item.content).join('\n');
+const todayFilePath = path.join(targetDir, '../updateLog.md');
+fs.writeFileSync(todayFilePath, todayContent, 'utf8');
+fs.writeFileSync(updateLogDir, JSON.stringify(updateLog), 'utf8');
+
+
 // 同时将其同/document/tpl.md 合并，同步到 document/index.maxWidth:
-// const tplPath = path.join(targetDir, 'tpl');
-// const tplContent = fs.readFileSync(tplPath, 'utf8');
-// const tplContentReplace = tplContent+'\n'+replaceContent;
-// const tplFilePath = path.join(targetDir, 'index.md');
-// fs.writeFileSync(tplFilePath, tplContentReplace, 'utf8');
-// console.log(`${tplFilePath} 文件已生成：`);
+const tplPath = path.join(targetDir, 'tpl');
+const tplContent = fs.readFileSync(tplPath, 'utf8');
+const tplContentReplace = tplContent+'\n'+ '本次更新\n' +todayContent;
+const tplFilePath = path.join(targetDir, 'index.md');
+fs.writeFileSync(tplFilePath, tplContentReplace, 'utf8');
+console.log(`${tplFilePath} 文件已生成：`);
