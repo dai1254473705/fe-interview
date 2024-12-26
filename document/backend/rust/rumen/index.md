@@ -1,4 +1,3 @@
-
 ---
 title: 十分钟 Rust 入门
 order: 1

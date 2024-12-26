@@ -1,3 +1,3 @@
 # 规范
 
-+ [code](/devstandards/code)
++ [代码规范](/devstandards/code)

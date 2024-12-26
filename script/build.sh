@@ -1,4 +1,4 @@
-node ./script/generate.js
+node ./script/generateMd.js
 
 log() {
   printf "[scripts/build.sh] : %s\n" "$1"
