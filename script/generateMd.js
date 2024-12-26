@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const allContent = [];
+const baseUrl = 'https://fe.netyali.cn';
 // 读取 index.md 的标题
 const getTitleFromIndexMd = (dir) => {
   const indexPath = path.join(dir, 'index.md');
@@ -35,6 +37,7 @@ const writeMd = (targetDir, fullContent) => {
   if (outputFilePath.indexOf('document/index.md') > -1) {
     return;
   }
+  allContent.push(fullContent);
   fs.writeFileSync(outputFilePath, fullContent, 'utf8');
   // console.log(`${targetDir}/index.md 文件已生成：`);
 }
@@ -79,3 +82,19 @@ function start(targetDir) {
 };
 const targetDir = path.join(__dirname, '../document/');
 start(targetDir);
+
+// 写入 README.md 文件和首页
+// 将(/替换成(baseUrl/)
+const readmeContent = allContent.join('\n');
+const replaceContent = readmeContent.replace(/\(\//ig, `(${baseUrl}/`);
+const readmeFilePath = path.join(targetDir, '../README.md');
+fs.writeFileSync(readmeFilePath, replaceContent, 'utf8');
+console.log(`${readmeFilePath} 文件已生成：`);
+
+// 同时将其同/document/tpl.md 合并，同步到 document/index.maxWidth:
+// const tplPath = path.join(targetDir, 'tpl');
+// const tplContent = fs.readFileSync(tplPath, 'utf8');
+// const tplContentReplace = tplContent+'\n'+replaceContent;
+// const tplFilePath = path.join(targetDir, 'index.md');
+// fs.writeFileSync(tplFilePath, tplContentReplace, 'utf8');
+// console.log(`${tplFilePath} 文件已生成：`);
