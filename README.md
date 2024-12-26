@@ -5,17 +5,42 @@
 
 + [十分钟 Rust 入门](https://fe.netyali.cn/backend/rust/rumen)
 + [rust 入门](https://fe.netyali.cn/backend/rust/start)
-# 规范
+# 开发规范
 
-+ [代码规范](https://fe.netyali.cn/devstandards/code)
++ [代码规范](https://fe.netyali.cn/devstandards/daimaguifan)
++ [工程规范](https://fe.netyali.cn/devstandards/gongchengguifan)
++ [架构设计](https://fe.netyali.cn/devstandards/jiagousheji)
 # 代码规范
 
-+ [/Users/daiyunzhou/code/project/fe-interview/document/devstandards/code/1无标题](https://fe.netyali.cn/devstandards/code/1)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/devstandards/code/2无标题](https://fe.netyali.cn/devstandards/code/2)
++ [1. CSS命名规范：理解与应用BEM方法论](https://fe.netyali.cn/devstandards/daimaguifan/1)
++ [2. 日志打印规范](https://fe.netyali.cn/devstandards/daimaguifan/2)
++ [3. 前端命名规范](https://fe.netyali.cn/devstandards/daimaguifan/3)
++ [4. 代码注释规范(参考jsdoc)](https://fe.netyali.cn/devstandards/daimaguifan/4)
++ [5. CSS 和 Sass 代码规范](https://fe.netyali.cn/devstandards/daimaguifan/5)
++ [6. HTML 代码规范](https://fe.netyali.cn/devstandards/daimaguifan/6)
++ [7. Javascript 代码风格指南](https://fe.netyali.cn/devstandards/daimaguifan/7)
++ [8. JS 命名规范](https://fe.netyali.cn/devstandards/daimaguifan/8)
++ [9. 代码提交规范-约定式提交](https://fe.netyali.cn/devstandards/daimaguifan/9)
++ [10. 版本号管理规范](https://fe.netyali.cn/devstandards/daimaguifan/10)
++ [11. 图片规范](https://fe.netyali.cn/devstandards/daimaguifan/11)
+# 工程规范
+
++ [1. README 编写规范](https://fe.netyali.cn/devstandards/gongchengguifan/1)
++ [2. Git message 书写规范](https://fe.netyali.cn/devstandards/gongchengguifan/2)
++ [3. Changelog 编写规范](https://fe.netyali.cn/devstandards/gongchengguifan/3)
++ [4. 提交代码标准](https://fe.netyali.cn/devstandards/gongchengguifan/4)
++ [5. 语义化版本化](https://fe.netyali.cn/devstandards/gongchengguifan/5)
++ [6. 规范使用“TODO”、“XXX”和“FIXME”](https://fe.netyali.cn/devstandards/gongchengguifan/6)
+# 架构设计
+
++ [1. 前端软件架构模式MVC_MVP_MVVM](https://fe.netyali.cn/devstandards/jiagousheji/1)
 # 工具
 
 + [开发调试技巧](https://fe.netyali.cn/devtools/debug)
 + [Git](https://fe.netyali.cn/devtools/git)
++ [环境配置相关](https://fe.netyali.cn/devtools/huanjingpeizhi)
++ [浏览器](https://fe.netyali.cn/devtools/liulanqi)
++ [企业微信](https://fe.netyali.cn/devtools/qiyeweixin)
 + [UML](https://fe.netyali.cn/devtools/uml)
 + [/Users/daiyunzhou/code/project/fe-interview/document/devtools/vscode无标题](https://fe.netyali.cn/devtools/vscode)
 # 开发调试技巧
@@ -43,6 +68,21 @@
 + [14. Git 合并时 --no-ff 的作用](https://fe.netyali.cn/devtools/git/14)
 + [15. git查看某次commit修改的内容](https://fe.netyali.cn/devtools/git/15)
 + [16. git commit之后如何撤销commit](https://fe.netyali.cn/devtools/git/16)
++ [17. 快速搞懂 vscode 插件Git Graph](https://fe.netyali.cn/devtools/git/17)
++ [查看分支是从哪个分支拉出来的](https://fe.netyali.cn/devtools/git/18)
++ [19. 把原项目放到新的 git仓库](https://fe.netyali.cn/devtools/git/19)
+# 环境配置相关
+
++ [1. mac 常用技巧](https://fe.netyali.cn/devtools/huanjingpeizhi/1)
++ [2. Homebrew国内如何自动安装（国内地址）](https://fe.netyali.cn/devtools/huanjingpeizhi/2)
+# 浏览器
+
++ [1. Chrome使用调试技巧](https://fe.netyali.cn/devtools/liulanqi/1)
++ [2. IE 11 无法安全地连接到此页面，这可能是因为该站点使用过期的或不安全的 TLS 安全设置](https://fe.netyali.cn/devtools/liulanqi/2)
++ [3. 浏览器插件开发](https://fe.netyali.cn/devtools/liulanqi/3)
+# 企业微信
+
++ [mac企业微信打开Debug模式](https://fe.netyali.cn/devtools/qiyeweixin/1)
 # UML
 
 + [常见的流程图符号及含义](https://fe.netyali.cn/devtools/uml/1)
