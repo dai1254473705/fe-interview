@@ -96,6 +96,8 @@ const readmeFilePath = path.join(targetDir, '../README.md');
 fs.writeFileSync(readmeFilePath, replaceContent, 'utf8');
 console.log(`${readmeFilePath} 文件已生成：`);
 
+// 提交后就会有更新日志
+// return;
 // 从 updateLog 目录中读取是否有上一次的更新记录，记录为 updateLog.json 文件
 const updateLogDir = path.join(__dirname, '../updateLog.json');
 // 判断上一次的文件内容的差异，找到新增的文件和移出的文件，放到两个不同的数组中
