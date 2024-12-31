@@ -5,7 +5,14 @@
 
 + [十分钟 Rust 入门](https://fe.netyali.cn/backend/rust/rumen)
 + [rust 入门](https://fe.netyali.cn/backend/rust/start)
-# 开发规范
+# 打包
+
++ [格式化](https://fe.netyali.cn/build/geshihua)
+# 格式化
+
++ [1. 基于husky实现git提交代码前校验](https://fe.netyali.cn/build/geshihua/1)
++ [2. lint-staged](https://fe.netyali.cn/build/geshihua/2)
+# 规范
 
 + [代码规范](https://fe.netyali.cn/devstandards/daimaguifan)
 + [工程规范](https://fe.netyali.cn/devstandards/gongchengguifan)
@@ -102,8 +109,7 @@
 + [设计模式](https://fe.netyali.cn/frontendbasics/c-shejimoshi)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/d-shujujiegou无标题](https://fe.netyali.cn/frontendbasics/d-shujujiegou)
 + [算法](https://fe.netyali.cn/frontendbasics/e-suanfa)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/f-wangluoanquan无标题](https://fe.netyali.cn/frontendbasics/f-wangluoanquan)
-+ [格式化及配置相关](https://fe.netyali.cn/frontendbasics/format)
++ [网络及安全](https://fe.netyali.cn/frontendbasics/f-wangluoanquan)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/g-wangluojianquan无标题](https://fe.netyali.cn/frontendbasics/g-wangluojianquan)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/h-xiaoxituisong无标题](https://fe.netyali.cn/frontendbasics/h-xiaoxituisong)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/i-xingnengyouhua无标题](https://fe.netyali.cn/frontendbasics/i-xingnengyouhua)
@@ -124,20 +130,37 @@
 + [7. 放大镜](https://fe.netyali.cn/frontendbasics/a-gongnenghanshu/7)
 # 理论
 
-+ [前端模块化](https://fe.netyali.cn/frontendbasics/b-lilun/1-fe-module)
-+ [什么是JWT](https://fe.netyali.cn/frontendbasics/b-lilun/2-jwt)
-+ [XSS、CSRF、SQL 注入、点击劫持攻击与防御以及四者间关系](https://fe.netyali.cn/frontendbasics/b-lilun/3-csrf-xss)
++ [1. V8引擎的垃圾回收](https://fe.netyali.cn/frontendbasics/b-lilun/1)
++ [2.JavaScript：立即执行函数表达式（IIFE）](https://fe.netyali.cn/frontendbasics/b-lilun/2)
++ [3. JavaScript深入之闭包](https://fe.netyali.cn/frontendbasics/b-lilun/3)
++ [4. 深入理解js闭包的9大使用场景](https://fe.netyali.cn/frontendbasics/b-lilun/4)
++ [5. JavaScript深入之从原型到原型链](https://fe.netyali.cn/frontendbasics/b-lilun/5)
++ [6. JavaScript深入之继承的多种方式和优缺点](https://fe.netyali.cn/frontendbasics/b-lilun/6)
++ [7. 什么是节流、防抖函数？作用及应用场景？如何实现？](https://fe.netyali.cn/frontendbasics/b-lilun/7)
++ [8. JavaScript专题之函数柯里化](https://fe.netyali.cn/frontendbasics/b-lilun/8)
++ [9. 如何解决跨域问题](https://fe.netyali.cn/frontendbasics/b-lilun/9)
++ [10. JavaScript深入之变量对象](https://fe.netyali.cn/frontendbasics/b-lilun/10)
++ [11. JavaScript深入之作用域链](https://fe.netyali.cn/frontendbasics/b-lilun/11)
++ [12. 前端模块化](https://fe.netyali.cn/frontendbasics/b-lilun/12)
++ [13. FAT和NTFS格式的区别](https://fe.netyali.cn/frontendbasics/b-lilun/13)
++ [14. 宏任务和微任务](https://fe.netyali.cn/frontendbasics/b-lilun/14)
++ [15. 在浏览器中输入URL并回车后都发生了什么？](https://fe.netyali.cn/frontendbasics/b-lilun/15)
 # 算法
 
 + [深度优先搜索算法](https://fe.netyali.cn/frontendbasics/e-suanfa/1Depth-First-Search)
 + [广度优先搜索算法](https://fe.netyali.cn/frontendbasics/e-suanfa/2Breadth-First-Search)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/e-suanfa/tree无标题](https://fe.netyali.cn/frontendbasics/e-suanfa/tree)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/e-suanfa/vdom无标题](https://fe.netyali.cn/frontendbasics/e-suanfa/vdom)
-# 格式化及配置相关
+# 网络及安全
 
-+ [eslint和prettier](https://fe.netyali.cn/frontendbasics/format/eslint)
-+ [基于husky实现git提交代码前校验](https://fe.netyali.cn/frontendbasics/format/husky)
-+ [lint-staged](https://fe.netyali.cn/frontendbasics/format/lint-staged)
++ [网络请求相关问题汇总](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/1)
++ [3. 什么是JWT](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/3)
++ [4. 浏览器缓存、DNS缓存、CDN缓存](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/4)
++ [5. XSS、CSRF、SQL 注入、点击劫持攻击与防御以及四者间关系](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/5)
++ [6. 请求的header里面有什么参数](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/6)
++ [7. 请求接口时如何保证信息的安全？](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/7)
++ [8. Https为什么安全？怎么知道当前请求是否安全？](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/8)
++ [9. 如何防止爬虫？](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/9)
 # 面试题
 
 + [面试题 1](https://fe.netyali.cn/frontendbasics/interview/1)
@@ -155,8 +178,11 @@
 + [HTML5 语义化元素入门教程](https://fe.netyali.cn/frontendbasics/k-html/2)
 # javascript 基础
 
-+ [javascript 基础](https://fe.netyali.cn/frontendbasics/l-javascript/1)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/l-javascript/export无标题](https://fe.netyali.cn/frontendbasics/l-javascript/export)
++ [0. JS基础问题汇总](https://fe.netyali.cn/frontendbasics/l-javascript/0)
++ [1. 断言](https://fe.netyali.cn/frontendbasics/l-javascript/1)
++ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/l-javascript/2无标题](https://fe.netyali.cn/frontendbasics/l-javascript/2)
++ [3. 正则基础](https://fe.netyali.cn/frontendbasics/l-javascript/3)
++ [4. 常用正则](https://fe.netyali.cn/frontendbasics/l-javascript/4)
 # node
 
 + [koa](https://fe.netyali.cn/nodejs/koa)

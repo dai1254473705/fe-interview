@@ -1,4 +1,4 @@
-# 开发规范
+# 规范
 
 + [代码规范](/devstandards/daimaguifan)
 + [工程规范](/devstandards/gongchengguifan)
