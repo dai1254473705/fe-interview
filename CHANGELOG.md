@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.15](https://github.com/dai1254473705/fe-interview/compare/v0.0.14...v0.0.15) (2024-12-31)
+
+
+### Features
+
+* delete non front-end knowledge base ([d3a656a](https://github.com/dai1254473705/fe-interview/commit/d3a656a59fe365e193cd3b496c4d9ab2ff755822))
+* update dumi version ([6f1ba67](https://github.com/dai1254473705/fe-interview/commit/6f1ba674cece291efeffb2aed8d3ccc0d5e11bd5))
+* update script and add new article ([f9977c0](https://github.com/dai1254473705/fe-interview/commit/f9977c0f73b2f87c4606fc97fd21442d2d95b33c))
+
 ## [0.0.14](https://github.com/dai1254473705/fe-interview/compare/v0.0.13...v0.0.14) (2024-12-26)
 
 ## [0.0.13](https://github.com/dai1254473705/fe-interview/compare/v0.0.12...v0.0.13) (2024-12-26)
