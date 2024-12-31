@@ -98,6 +98,7 @@
 # 前端基础
 
 + [算法](https://fe.netyali.cn/frontendbasics/algorithm)
++ [功能函数](https://fe.netyali.cn/frontendbasics/basics)
 + [css 基础啊](https://fe.netyali.cn/frontendbasics/css)
 + [设计模式](https://fe.netyali.cn/frontendbasics/designMode)
 + [格式化及配置相关](https://fe.netyali.cn/frontendbasics/format)
@@ -112,6 +113,15 @@
 + [广度优先搜索算法](https://fe.netyali.cn/frontendbasics/algorithm/2Breadth-First-Search)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/algorithm/tree无标题](https://fe.netyali.cn/frontendbasics/algorithm/tree)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/algorithm/vdom无标题](https://fe.netyali.cn/frontendbasics/algorithm/vdom)
+# 功能函数
+
++ [1. 常用 util 方法](https://fe.netyali.cn/frontendbasics/basics/1)
++ [2. 倒计时](https://fe.netyali.cn/frontendbasics/basics/2)
++ [3. 鼠标点击拖动页面的dom节点](https://fe.netyali.cn/frontendbasics/basics/3)
++ [4. 数字金额转中文大写金额](https://fe.netyali.cn/frontendbasics/basics/4)
++ [5. js获取屏幕宽高](https://fe.netyali.cn/frontendbasics/basics/5)
++ [6. JS实现颜色的10进制转化成rgba格式的方法](https://fe.netyali.cn/frontendbasics/basics/6)
++ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/basics/7无标题](https://fe.netyali.cn/frontendbasics/basics/7)
 # css 基础啊
 
 + [使用css实现一个自适应浏览器大小且宽高比为2：1 的块](https://fe.netyali.cn/frontendbasics/css/1)
@@ -158,9 +168,6 @@
 + [7. 本地调试npm包操作流程](https://fe.netyali.cn/nodejs/npm_yarn_pnpm/7)
 + [/Users/daiyunzhou/code/project/fe-interview/document/nodejs/npm_yarn_pnpm/boxen无标题](https://fe.netyali.cn/nodejs/npm_yarn_pnpm/boxen)
 + [/Users/daiyunzhou/code/project/fe-interview/document/nodejs/npm_yarn_pnpm/httpproxy无标题](https://fe.netyali.cn/nodejs/npm_yarn_pnpm/httpproxy)
-# 杂记
-
-+ [落叶](https://fe.netyali.cn/others/fallenLeaves)
 # 摄影
 
 + [2018年](https://fe.netyali.cn/photography/2018)

@@ -110,12 +110,3 @@ const todayContent = addPath.map(item => item.content).join('\n');
 const todayFilePath = path.join(targetDir, '../updateLog.md');
 fs.writeFileSync(todayFilePath, todayContent, 'utf8');
 fs.writeFileSync(updateLogDir, JSON.stringify(updateLog), 'utf8');
-
-
-// 同时将其同/document/tpl.md 合并，同步到 document/index.maxWidth:
-const tplPath = path.join(targetDir, 'tpl');
-const tplContent = fs.readFileSync(tplPath, 'utf8');
-const tplContentReplace = tplContent+'\n'+ '本次更新\n' +todayContent;
-const tplFilePath = path.join(targetDir, 'index.md');
-fs.writeFileSync(tplFilePath, tplContentReplace, 'utf8');
-console.log(`${tplFilePath} 文件已生成：`);
