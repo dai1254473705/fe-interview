@@ -1,5 +1,12 @@
+---
+title: 5. JavaScript深入之从原型到原型链
+order: 5
+---
+
 # 5. JavaScript深入之从原型到原型链
+
 原文：[https://github.com/mqyqingfeng/Blog/issues/2](https://github.com/mqyqingfeng/Blog/issues/2)
+
 参考：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 #### 什么是原型链？

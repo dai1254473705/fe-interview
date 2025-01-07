@@ -107,7 +107,7 @@
 + [功能函数](https://fe.netyali.cn/frontendbasics/a-gongnenghanshu)
 + [理论](https://fe.netyali.cn/frontendbasics/b-lilun)
 + [设计模式](https://fe.netyali.cn/frontendbasics/c-shejimoshi)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/d-shujujiegou无标题](https://fe.netyali.cn/frontendbasics/d-shujujiegou)
++ [数据结构](https://fe.netyali.cn/frontendbasics/d-shujujiegou)
 + [算法](https://fe.netyali.cn/frontendbasics/e-suanfa)
 + [网络及安全](https://fe.netyali.cn/frontendbasics/f-wangluoanquan)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/g-wangluojianquan无标题](https://fe.netyali.cn/frontendbasics/g-wangluojianquan)
@@ -145,12 +145,26 @@
 + [13. FAT和NTFS格式的区别](https://fe.netyali.cn/frontendbasics/b-lilun/13)
 + [14. 宏任务和微任务](https://fe.netyali.cn/frontendbasics/b-lilun/14)
 + [15. 在浏览器中输入URL并回车后都发生了什么？](https://fe.netyali.cn/frontendbasics/b-lilun/15)
+# 数据结构
+
++ [1.  探索 JavaScript 中的队列与栈：基于数组的实现](https://fe.netyali.cn/frontendbasics/d-shujujiegou/1)
++ [2. 巧用链表结构模拟 JavaScript 中的队列与栈](https://fe.netyali.cn/frontendbasics/d-shujujiegou/2)
 # 算法
 
-+ [深度优先搜索算法](https://fe.netyali.cn/frontendbasics/e-suanfa/1Depth-First-Search)
-+ [广度优先搜索算法](https://fe.netyali.cn/frontendbasics/e-suanfa/2Breadth-First-Search)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/e-suanfa/tree无标题](https://fe.netyali.cn/frontendbasics/e-suanfa/tree)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/e-suanfa/vdom无标题](https://fe.netyali.cn/frontendbasics/e-suanfa/vdom)
++ [1. 数组去重](https://fe.netyali.cn/frontendbasics/e-suanfa/1)
++ [2. 统计字符串中字母个数或统计最多字母数](https://fe.netyali.cn/frontendbasics/e-suanfa/2)
++ [3. 排序算法](https://fe.netyali.cn/frontendbasics/e-suanfa/3)
++ [4. 二分法查找](https://fe.netyali.cn/frontendbasics/e-suanfa/4)
++ [5. 二叉树和有序二叉树和二叉查找树](https://fe.netyali.cn/frontendbasics/e-suanfa/5)
++ [6. 判断一个单词是否是回文](https://fe.netyali.cn/frontendbasics/e-suanfa/6)
++ [7. 不借助临时变量，进行两个整数的交换](https://fe.netyali.cn/frontendbasics/e-suanfa/7)
++ [8. 斐波那契数列](https://fe.netyali.cn/frontendbasics/e-suanfa/8)
++ [9. 找出数组的最大差值](https://fe.netyali.cn/frontendbasics/e-suanfa/9)
++ [10. 随机生成指定长度字符串](https://fe.netyali.cn/frontendbasics/e-suanfa/10)
++ [11. 输出金字塔1，2，3以下结构](https://fe.netyali.cn/frontendbasics/e-suanfa/11)
++ [12. 深度优先搜索算法](https://fe.netyali.cn/frontendbasics/e-suanfa/12)
++ [13. 广度优先搜索算法](https://fe.netyali.cn/frontendbasics/e-suanfa/13)
++ [14. 计算时间列表最小时间差](https://fe.netyali.cn/frontendbasics/e-suanfa/14)
 # 网络及安全
 
 + [网络请求相关问题汇总](https://fe.netyali.cn/frontendbasics/f-wangluoanquan/1)
@@ -180,7 +194,7 @@
 
 + [0. JS基础问题汇总](https://fe.netyali.cn/frontendbasics/l-javascript/0)
 + [1. 断言](https://fe.netyali.cn/frontendbasics/l-javascript/1)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/l-javascript/2无标题](https://fe.netyali.cn/frontendbasics/l-javascript/2)
++ [2. ES6 let 与 const](https://fe.netyali.cn/frontendbasics/l-javascript/2)
 + [3. 正则基础](https://fe.netyali.cn/frontendbasics/l-javascript/3)
 + [4. 常用正则](https://fe.netyali.cn/frontendbasics/l-javascript/4)
 # node

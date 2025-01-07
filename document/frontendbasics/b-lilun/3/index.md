@@ -1,3 +1,8 @@
+---
+title: 3. JavaScript深入之闭包
+order: 3
+---
+
 # 3. JavaScript深入之闭包
 
 ## 什么是闭包？

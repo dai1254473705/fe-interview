@@ -1,3 +1,8 @@
+---
+title: 6. JavaScript深入之继承的多种方式和优缺点
+order: 6
+---
+
 # 6. JavaScript深入之继承的多种方式和优缺点
 
 本文讲解JavaScript各种继承方式和优缺点。

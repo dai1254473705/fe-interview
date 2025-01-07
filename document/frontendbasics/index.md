@@ -3,7 +3,7 @@
 + [功能函数](/frontendbasics/a-gongnenghanshu)
 + [理论](/frontendbasics/b-lilun)
 + [设计模式](/frontendbasics/c-shejimoshi)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/d-shujujiegou无标题](/frontendbasics/d-shujujiegou)
++ [数据结构](/frontendbasics/d-shujujiegou)
 + [算法](/frontendbasics/e-suanfa)
 + [网络及安全](/frontendbasics/f-wangluoanquan)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/g-wangluojianquan无标题](/frontendbasics/g-wangluojianquan)

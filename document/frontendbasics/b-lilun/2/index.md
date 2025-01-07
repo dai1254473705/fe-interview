@@ -1,3 +1,7 @@
+---
+title: 2.JavaScript：立即执行函数表达式（IIFE）
+order: 2
+---
 # 2.JavaScript：立即执行函数表达式（IIFE）
 
 ## 它是什么

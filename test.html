@@ -2,101 +2,73 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
 </body>
 <script>
-	/**
-	 * The default chaining behavior can be implemented inside a base handler class.
-	 */
-	class AbstractHandler {
-		nextHandler;
 
-		setNext(handler) {
-			this.nextHandler = handler;
-			// Returning a handler from here will let us link handlers in a
-			// convenient way like this:
-			// monkey.setNext(squirrel).setNext(dog);
-			return handler;
-		}
+  function LinkedListQueue() {
+    // 链表头节点，队列头部元素从此处开始访问
+    this.head = null;
+    // 链表尾节点，用于在队列尾部快速插入元素
+    this.tail = null;
+    // 队列长度，方便追踪队列元素数量
+    this.length = 0;
+  }
 
-		handle(request) {
-			if (this.nextHandler) {
-				return this.nextHandler.handle(request);
-			}
-			return null;
-		}
-	}
-
-	/**
-	 * All Concrete Handlers either handle a request or pass it to the next handler
-	 * in the chain.
-	 */
-	class MonkeyHandler extends AbstractHandler {
-		handle(request) {
-			if (request === 'Banana') {
-				return `MonkeyHandler ${request}.`;
-			}
-			return super.handle(request);
-		}
-	}
-
-	class SquirrelHandler extends AbstractHandler {
-		handle(request) {
-			if (request === 'Nut') {
-				return `SquirrelHandler ${request}.`;
-			}
-			return super.handle(request);
-		}
-	}
-
-	class DogHandler extends AbstractHandler {
-		handle(request) {
-			if (request === 'MeatBall') {
-				return `DogHandler ${request}.`;
-			}
-			return super.handle(request);
-		}
-	}
-
-	/**
-	 * The client code is usually suited to work with a single handler. In most
-	 * cases, it is not even aware that the handler is part of a chain.
-	 */
-	function clientCode(handler) {
-		const foods = ['Nut', 'Banana', 'Cup of coffee'];
-
-		for (const food of foods) {
-			const result = handler.handle(food);
-			if (result) {
-				console.log(`  ${result}`);
-			} else {
-				console.log(`  ${food} was left untouched.`);
-			}
-		}
-	}
-
-	/**
-	 * The other part of the client code constructs the actual chain.
-	 */
-	const monkey = new MonkeyHandler();
-	const squirrel = new SquirrelHandler();
-	const dog = new DogHandler();
-
-	monkey.setNext(squirrel).setNext(dog);
-
-	/**
-	 * The client should be able to send a request to any handler, not just the
-	 * first one in the chain.
-	 */
-	console.log('Chain: Monkey > Squirrel > Dog\n');
-	clientCode(monkey);
-	// console.log('Subchain: Squirrel > Dog\n');
-	// clientCode(squirrel);
+  // 链表节点构造函数
+  function Node(data) {
+    this.data = data;
+    this.next = null;
+  }
+  LinkedListQueue.prototype.enqueue = function (data) {
+    if (data === 2) {
+      console.log(this.head.next === this.tail);
+      debugger
+    }
+    const newNode = new Node(data);
+    if (this.length === 0) {
+      // 若队列为空，新节点既是头节点也是尾节点
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      /**
+       * 将新节点添加到尾节点之后，并更新尾节点
+       *
+       * 在链表实现的队列中，虽然没有直接对 `head` 进行显式的修改操作，
+       * 但当执行 `this.tail.next = newNode` 时，会间接影响到 `head` 的 `next` 指针。
+       * 原因是在第一次入队 `queue.enqueue(1)` 时，`head` 和 `tail` 都指向了这个新创建的包含数据 `1` 的节点。
+       * 当第二次执行 `queue.enqueue(12)` 时，`this.tail` 就是之前那个包含数据 `1` 的节点，
+       * 执行 `this.tail.next = newNode` 就将包含数据 `1` 的节点的 `next` 指针指向了新创建的包含数据 `12` 的节点，
+       * 所以看起来 `head` 的 `next` 就发生了改变，实际上是因为 `tail` 原本和 `head` 指向同一个初始节点，
+       * 对 `tail` 的后继节点的操作自然会反映在链表的结构中，进而影响到 `head` 所能访问到的后续节点。
+       */
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+  };
+  LinkedListQueue.prototype.dequeue = function () {
+    if (this.length === 0) {
+      return null;
+    }
+    const data = this.head.data;
+    this.head = this.head.next;
+    if (this.length === 1) {
+      // 若队列仅剩一个元素，出队后尾节点也需置空
+      this.tail = null;
+    }
+    this.length--;
+    return data;
+  };
+  const queue = new LinkedListQueue();
+queue.enqueue(1);
+queue.enqueue(12);
+console.log(queue);
 </script>
 
 </html>

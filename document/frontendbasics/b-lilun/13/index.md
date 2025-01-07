@@ -1,3 +1,7 @@
+---
+title: 13. FAT和NTFS格式的区别
+order: 13
+---
 # 13. FAT和NTFS格式的区别
 
 原文地址：http://www.ntfsformac.cn/changjianwenti/qita-nytqubie.html
