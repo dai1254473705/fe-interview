@@ -188,7 +188,7 @@
 + [现代Web设计中的Flex布局：深入浅出新手指南](https://fe.netyali.cn/frontendbasics/j-css/5)
 # html
 
-+ [html 基础](https://fe.netyali.cn/frontendbasics/k-html/1)
++ [1. html 基础](https://fe.netyali.cn/frontendbasics/k-html/1)
 + [HTML5 语义化元素入门教程](https://fe.netyali.cn/frontendbasics/k-html/2)
 # javascript 基础
 
