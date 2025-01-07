@@ -1,6 +1,6 @@
 {
   "name": "fe-interview",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "前端面试题",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
