@@ -7,7 +7,7 @@
 + [算法](/frontendbasics/e-suanfa)
 + [网络及安全](/frontendbasics/f-wangluoanquan)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/g-wangluojianquan无标题](/frontendbasics/g-wangluojianquan)
-+ [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/h-xiaoxituisong无标题](/frontendbasics/h-xiaoxituisong)
++ [消息推送](/frontendbasics/h-xiaoxituisong)
 + [/Users/daiyunzhou/code/project/fe-interview/document/frontendbasics/i-xingnengyouhua无标题](/frontendbasics/i-xingnengyouhua)
 + [面试题](/frontendbasics/interview)
 + [css 基础啊](/frontendbasics/j-css)
